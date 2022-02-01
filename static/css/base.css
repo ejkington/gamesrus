@@ -60,6 +60,11 @@ body {
     border: 1px solid black !important;
 }
 
+.footer-bg,
+.header-bg {
+    background: whitesmoke;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

@@ -48,11 +48,11 @@
 </head>
 
 <body>
-    <header class="container-fluid fixed-top">
-        <div id="top-nav " class="row bg-white pt-lg-2 d-none d-lg-flex">
+    <header class="container-fluid fixed-top header-bg">
+        <div id="top-nav " class="row pt-lg-2 d-none d-lg-flex">
             <div class="col-12 lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0">Games R Us</h2>
+                    <h2 class="logo-font text-black my-0">Games ® Us</h2>
                 </a>
             </div>
             <div class="col-3 lg-4 my-auto py-1 py-lg-0">
@@ -133,6 +133,62 @@
 
     {% block postloadjs %}
     {% endblock %}
+
+    <!-- Footer -->
+    <footer class="font-small mt-auto footer-bg">
+        <div class="container">
+            <div class="row mw-lg justify-content-center">
+                <div class="col-md-6 my-5 text-md-left footer-content">
+                    <p>Follow our page to get our best deals
+                    </p>
+                    <a href="#" target="_blank" rel="noopener nofollow" class="btn btn-blue pb-2">Games R Us on Facebook
+                        <i class="fab fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="col-md-6 my-5 footer-content">
+                    <div class="row">
+                        <div class="col-7">
+                            <p>Signup for our newsletter</p>
+                        </div>
+                        <div class="col ml-auto">
+                            <a href="http://eepurl.com/hSCqlb" target="_blank" rel="noopener nofollow"
+                                title="Mailchimp link"><img class="img-fluid pb-2"
+                                    src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"
+                                    alt="Mailchimp logo"></a>
+                        </div>
+                    </div>
+
+                    <!-- Mailchimp Signup Form - followed tutorial for adapted layout from here: https://bootstrapious.com/p/mailchimp-signup-form -->
+                    <form
+                        action="https://herokuapp.us20.list-manage.com/subscribe/post?u=e5b424993e29ce6be7320595a&amp;id=dcba1d7b60"
+                        method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                        target="_blank" novalidate>
+                        <div class="input-group input-left">
+                            <input type="email" value="" name="EMAIL" id="mce-EMAIL" required="required"
+                                class="form-control" placeholder="Enter your email" aria-labelledby="subscribe">
+                            <span class="input-group-append">
+                                <button class="btn btn-trans" type="submit" id="subscribe">Subscribe</button>
+                            </span>
+                        </div>
+
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <label for="hidden_input">Hidden Element</label>
+                            <input type="text" name="b_e5b424993e29ce6be7320595a_dcba1d7b60" tabindex="-1" value=""
+                                id="hidden_input">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <p class="pb-2 pb-md-0 text-center">
+            © 2022 Copyright Games R us ~ Niklas Färeborg
+        </p>
+        </div>
+    </footer>
+
+
+
+
 </body>
 
 </html>
