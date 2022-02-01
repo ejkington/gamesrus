@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -48,13 +49,12 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware', # Dont remove
+    'django.contrib.auth.middleware.AuthenticationMiddleware',  # Dont remove
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 AUTHENTICATION_BACKENDS = [
-   
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
 
@@ -63,7 +63,7 @@ AUTHENTICATION_BACKENDS = [
 
 ]
 
-SITE_ID = 1 
+SITE_ID = 1
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -82,7 +82,11 @@ ROOT_URLCONF = 'gamesrus.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
+        ],
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
