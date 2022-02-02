@@ -49,13 +49,14 @@
 
 <body>
     <header class="container-fluid fixed-top header-bg">
-        <div id="top-nav " class="row pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0">Games ® Us</h2>
-                </a>
-            </div>
-            <div class="col-3 lg-4 my-auto py-1 py-lg-0">
+
+        <div class="col-12 lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+            <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                <h2 class="logo-font text-black my-0">Games ® Us</h2>
+            </a>
+        </div>
+        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex header-bg">
+            <div class="col-4 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-0" type="text" name="q"
@@ -118,6 +119,22 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+        </div>
+        <div class="row bg-white">
+            <nav class="navbar navbar-expand-lg navbar-light w-100">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                    aria-controls="main-nav" aria-expanded="false" aria-lable="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                {% include 'includes/mobile-top-header.html' %}
+                {% include 'includes/main-nav.html' %}
+
+            </nav>
+        </div>
+        <div id="delivery-banner" class="row text-center">
+            <div class="col bg-black text-white">
+                <h4 class="logo-font my-1">Free delivery on orders over ${{ free_shipping_threshold }}!</h4>
             </div>
         </div>
     </header>

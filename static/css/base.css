@@ -15,6 +15,12 @@ body {
     font-family: 'Lora';
 }
 
+a {
+    color: black;
+    display: flex;
+    font-weight: 800;
+}
+
 /* neon button from kevin powell */
 
 .neon-button {
@@ -128,6 +134,10 @@ body {
 
 .border-black {
     border: 1px solid black !important;
+}
+
+.bg-black {
+    background: #000 !important;
 }
 
 .footer-bg,
