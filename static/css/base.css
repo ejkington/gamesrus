@@ -135,6 +135,19 @@ body {
     background: whitesmoke;
 }
 
+/* button in footer */
+
+.btn-blue:hover {
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 5px white;
+}
+
+.btn-blue {
+    background: linear-gradient(45deg, #001f698c, #0058e18c 50%, #276eddb9 50%, #68a1ff);
+    border: 1px solid #003d8b;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
