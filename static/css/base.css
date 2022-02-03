@@ -17,7 +17,6 @@ body {
 
 a {
     color: black;
-    display: flex;
     font-weight: 800;
 }
 
@@ -171,6 +170,15 @@ a {
 
 .details {
     margin-top: 80px
+}
+
+a.category-badge>span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
+.span-center {
+    color: green;
 }
 
 /* -------------------------------- Media Queries */
