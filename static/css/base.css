@@ -142,7 +142,7 @@ a {
 
 .footer-bg,
 .header-bg {
-    background: whitesmoke;
+    background: white;
 }
 
 /* button in footer */
@@ -165,8 +165,12 @@ a {
     top: 0;
     left: 0;
     position: fixed;
-    background: whitesmoke;
+    background: white;
     z-index: -1;
+}
+
+.details {
+    margin-top: 80px
 }
 
 /* -------------------------------- Media Queries */
@@ -190,5 +194,17 @@ a {
 
     .header-container {
         padding-top: 164px;
+    }
+}
+
+/* adds padding for mobile size */
+
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
     }
 }
