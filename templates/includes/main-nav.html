@@ -19,9 +19,9 @@
                 Mouses
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="Gaming-mouse-link">
-                <a href="" class="dropdown-item">Rgb</a>
-                <a href="" class="dropdown-item">Cordless</a>
-                <a href="" class="dropdown-item">All Mouses</a>
+                <a href="{% url 'products' %}?category=rgb_mouse" class="dropdown-item">Rgb</a>
+                <a href="{% url 'products' %}?category=cordless_mouse" class="dropdown-item">Cordless</a>
+                <a href="{% url 'products' %}?category=cordless_mouse,rgb_mouse" class="dropdown-item">All Mouses</a>
             </div>
         </li>
 
@@ -31,9 +31,10 @@
                 Headsets
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="headphones-link">
-                <a href="" class="dropdown-item">Rgb</a>
-                <a href="" class="dropdown-item">Cordless</a>
-                <a href="" class="dropdown-item">All Headsets</a>
+                <a href="{% url 'products' %}?category=rgb_headset" class="dropdown-item">Rgb</a>
+                <a href="{% url 'products' %}?category=cordless_headset" class="dropdown-item">Cordless</a>
+                <a href="{% url 'products' %}?category=cordless_headset,rgb_headset" class="dropdown-item">All
+                    Headsets</a>
             </div>
         </li>
 
@@ -43,7 +44,7 @@
                 Chairs
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="chair-link">
-                <a href="" class="dropdown-item">All Chairs</a>
+                <a href="{% url 'products' %}?category=gaming_chair" class="dropdown-item">All Chairs</a>
             </div>
         </li>
 
@@ -53,9 +54,10 @@
                 Keyboards
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="keyboard-link">
-                <a href="" class="dropdown-item">Rgb</a>
-                <a href="" class="dropdown-item">Cordless</a>
-                <a href="" class="dropdown-item">All Keyboards</a>
+                <a href="{% url 'products' %}?category=rgb_keyboard" class="dropdown-item">Rgb</a>
+                <a href="{% url 'products' %}?category=cordless_keyboard" class="dropdown-item">Cordless</a>
+                <a href="{% url 'products' %}?category=cordless_keyboard,rgb_keyboard" class="dropdown-item">All
+                    Keyboards</a>
             </div>
         </li>
 
@@ -65,10 +67,11 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All
+                    Specials</a>
             </div>
         </li>
     </ul>
