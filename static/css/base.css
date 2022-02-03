@@ -17,6 +17,7 @@ body {
 
 a {
     color: black;
+    display: flex;
     font-weight: 800;
 }
 
@@ -172,13 +173,20 @@ a {
     margin-top: 80px
 }
 
-a.category-badge>span.badge:hover {
-    background: #212529 !important;
-    color: #fff !important;
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
 }
 
-.span-center {
-    color: green;
+.btt-link {
+    cursor: pointer;
+}
+
+.arrow-margin {
+    margin-left: 0.9rem;
 }
 
 /* -------------------------------- Media Queries */
