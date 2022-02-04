@@ -193,7 +193,6 @@ a {
 .card:active,
 .card:focus {
     margin: 0 auto !important;
-    font-weight: bold;
     margin-left: .5px;
     margin-right: .5px;
     box-shadow: 0 0 15px #000;
