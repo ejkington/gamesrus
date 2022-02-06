@@ -4,7 +4,7 @@
 <html lang="en">
 
 <head>
-
+    <!-- Meta tags to improve SEO, with description and search keywords. -->
     {% block meta %}
     <meta name="description" content="homepage gamesrus">
     <meta name="keywords" content="pcgaming, pc, gaming, sweden, keyboard,">
@@ -16,6 +16,7 @@
     {% block extra_meta %}
     {% endblock %}
 
+    <!-- Stylesheets from Bootstrap, Google Fonts, Font Awesome and my own base.css stylesheet. -->
     {% block corecss %}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,10 +48,12 @@
     {% block extra_js %}
     {% endblock %}
 
+    <!-- Extra title will appear beside the main title of the page in the window header -->
     <title>Games R Us {% block extra_title %}{% endblock %}</title>
 </head>
 
 <body>
+    <!-- Navbar -->
     <header class="container-fluid fixed-top header-bg">
 
         <div class="col-12 lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
@@ -60,6 +63,7 @@
                 </h2>
             </a>
         </div>
+        <!-- Search bar -->
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex header-bg">
             <div class="col-4 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'products' %}">
@@ -86,6 +90,7 @@
                                 <p class="my-0">My account</p>
                             </div>
                         </a>
+                        <!-- Account Operations -->
                         <div class="dropdown-menu border-0" aria-labelledby="user-option">
                             {% if request.user.is_authenticated %}
                             {% if requst.user.is_superuser %}
@@ -132,6 +137,8 @@
                     aria-controls="main-nav" aria-expanded="false" aria-lable="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
+                <!-- Including the mobile nav and products navigation -->
                 {% include 'includes/mobile-top-header.html' %}
                 {% include 'includes/main-nav.html' %}
 
