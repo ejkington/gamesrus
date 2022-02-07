@@ -59,27 +59,28 @@
         <div class="col-12 lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
             <a href="{% url 'home' %}" class="nav-link main-logo-link">
                 <h2 class="logo-font text-black my-0">
-                    <img src="/media/Logo.png" alt="Logo">
+                    <b>Games</b> ® <b>Us</b>
                 </h2>
             </a>
-        </div>
-        <!-- Search bar -->
-        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex header-bg">
-            <div class="col-4 col-lg-4 my-auto py-1 py-lg-0">
-                <form method="GET" action="{% url 'products' %}">
-                    <div class="input-group w-100">
-                        <input class="form-control border border-black rounded-0" type="text" name="q"
-                            placeholder="Search the site">
-                        <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </button>
+            <!-- Search bar -->
+            <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex header-bg">
+                <div class="col-4 col-lg-4 my-auto py-1 py-lg-0">
+                    <form method="GET" action="{% url 'products' %}">
+                        <div class="input-group w-100">
+                            <input class="form-control border border-black rounded-2" type="text" name="q"
+                                placeholder="Search the site">
+                            <div class="input-group-append">
+                                <button class="form-control btn btn-black border border-black rounded-2" type="submit">
+                                    <span class="icon">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
+
             <div class="col-12 lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
