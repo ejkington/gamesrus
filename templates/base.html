@@ -79,59 +79,59 @@
                         </div>
                     </form>
                 </div>
-            </div>
+                <div class="col-6 lg-4 my-auto py-1 py-lg-0 right-align">
+                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                        <li class="list-inline-item dropdown">
+                            <a href="#" class="text-black nav-link" id="user-option" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <div><i class="fas fa-user fa-lg"></i></div>
+                                    <p class="my-0">My account</p>
+                                </div>
+                            </a>
+                            <!-- Account Operations -->
+                            <div class="dropdown-menu border-2" aria-labelledby="user-option">
+                                {% if request.user.is_authenticated %}
+                                {% if requst.user.is_superuser %}
 
-            <div class="col-12 lg-4 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                    <li class="list-inline-item dropdown">
-                        <a href="#" class="text-black nav-link" id="user-option" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My account</p>
+                                <a href="#" class="dropdown-item">Product Managment</a>
+
+                                {% endif %}
+
+                                <a href="#" class="dropdown-item">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+
+                                {% else %}
+
+                                <a href="{% url 'account_signup' %}">Sign Up</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+
+                                {% endif %}
+
                             </div>
-                        </a>
-                        <!-- Account Operations -->
-                        <div class="dropdown-menu border-0" aria-labelledby="user-option">
-                            {% if request.user.is_authenticated %}
-                            {% if requst.user.is_superuser %}
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="{% url 'view_bag' %}"
+                                class="{% if grand_total %} text-info font-weight-bold {% else %}text-black{% endif %} nav-link">
+                                <div class="text-center">
+                                    <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                    <p class="my-0">
+                                        {% if grand_total %}
+                                        ${{ grand_total|floatformat:2 }}
 
-                            <a href="#" class="dropdown-item">Product Managment</a>
+                                        {% else %}
+                                        $0.00
 
-                            {% endif %}
-
-                            <a href="#" class="dropdown-item">My Profile</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-
-                            {% else %}
-
-                            <a href="{% url 'account_signup' %}">Sign Up</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-
-                            {% endif %}
-
-                        </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="{% url 'view_bag' %}"
-                            class="{% if grand_total %} text-info font-weight-bold {% else %}text-black{% endif %} nav-link">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="my-0">
-                                    {% if grand_total %}
-                                    ${{ grand_total|floatformat:2 }}
-
-                                    {% else %}
-                                    $0.00
-
-                                    {% endif %}
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
+
         <div class="row bg-white">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
