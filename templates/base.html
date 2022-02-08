@@ -80,7 +80,7 @@
                     </form>
                 </div>
             </div>
-            <!-- my account and bag -->
+            <!-- Sign in or Account, depending on whether the user is signed in or not -->
             <div class="col-12 lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
@@ -111,6 +111,8 @@
 
                         </div>
                     </li>
+
+                     <!-- Shopping Cart -->
                     <li class="list-inline-item">
                         <a href="{% url 'view_bag' %}"
                             class="{% if grand_total %} text-info font-weight-bold {% else %}text-black{% endif %} nav-link">
@@ -167,7 +169,6 @@
     {% endblock %}
 
     <!-- Footer -->
-
     <footer class="font-small mt-auto footer-bg">
         <section class="row w-100 mx-auto">
             <div class="col col-md-8 text-center mx-auto my-5">
