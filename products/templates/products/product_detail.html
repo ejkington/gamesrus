@@ -48,7 +48,7 @@
                 {% else %}
                 <small class="text-muted">No Rating</small>
                 {% endif %}
-                <p class="mt-5">{{ product.description }}</p>
+                <p class="mt-5 text-black">{{ product.description }}</p>
                 <!-- Form for adding products to shopping bag -->
                 <form action="{% url 'add_to_bag' product.id %}" method="POST" class="form">
                     {% csrf_token %}
@@ -94,4 +94,9 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/qty_input_script.html' %}
 {% endblock %}
