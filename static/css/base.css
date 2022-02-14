@@ -151,6 +151,22 @@ a {
     color: black;
 }
 
+/* Toasts from bootstrap */
+
+.message-container {
+    position: fixed;
+    top: 170px;
+    right: 20px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
 
 /* button in footer */
 
