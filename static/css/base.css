@@ -168,6 +168,12 @@ a {
     height: 2px;
 }
 
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 /* button in footer */
 
 .btn-blue:hover {
