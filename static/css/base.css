@@ -145,6 +145,13 @@ a {
     background: white;
 }
 
+.btn-browse:hover,
+.btn-browse:active {
+    background-color: var(--clr-neon);
+    color: black;
+}
+
+
 /* button in footer */
 
 .btn-blue:hover {
@@ -207,6 +214,7 @@ a {
 .right-align {
     left: 12rem;
 }
+
 
 /* -------------------------------- Media Queries */
 

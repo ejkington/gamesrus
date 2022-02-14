@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% endblock %}
 
+
     {% block extra_meta %}
     {% endblock %}
 
@@ -54,7 +55,7 @@
 
 <body>
     <!-- Navbar -->
-    <header class="container-fluid fixed-top header-bg">
+    <header class="container-fluid header-bg">
 
         <div class="col-12 lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
             <a href="{% url 'home' %}" class="nav-link main-logo-link">
@@ -112,7 +113,7 @@
                         </div>
                     </li>
 
-                     <!-- Shopping Cart -->
+                    <!-- Shopping Bag -->
                     <li class="list-inline-item">
                         <a href="{% url 'view_bag' %}"
                             class="{% if grand_total %} text-info font-weight-bold {% else %}text-black{% endif %} nav-link">
@@ -170,17 +171,14 @@
 
     <!-- Footer -->
     <footer class="font-small mt-auto footer-bg">
-        <section class="row w-100 mx-auto">
-            <div class="col col-md-8 text-center mx-auto my-5">
-                <hr>
-                <h2>Our promise</h4>
-                    <h3>
-                        We strive to offer the best possible selection of branded pc gaming gear
-                        to the best prices available, shipping to the whole world at record pace
-                        <hr>
-                    </h3>
-            </div>
-        </section>
+        <div class="my-5">
+            <h4 class="text-center">
+                <a href="{% url 'products' %}"
+                    class="btn btn-black btn-lg border border-black rounded-2 text-white mt-4 text-uppercase btn-browse mb-2">Browse
+                    Products
+                </a>
+            </h4>
+        </div>
 
         <div class="container">
             <div class="row mw-lg justify-content-center">
@@ -199,4 +197,5 @@
         </div>
     </footer>
 </body>
+
 </html>
