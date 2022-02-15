@@ -1,13 +1,15 @@
 #payment-form .form-controll,
 #card-element {
-    color: black;
-    border: 2px solid black;
+  color: black;
+  border: 2px solid black;
 }
 
 .fieldset-lable {
-    position: relative;
-    right: .4rem;
+  position: relative;
+  right: .4rem;
 }
+
+.align-center {}
 
 /* Stripe */
 
@@ -35,20 +37,20 @@
 }
 
 .stripe-style-input::placeholder {
-    color: #aab7c4;
+  color: #aab7c4;
 }
 
 .fieldset-label {
-    position: relative;
-    right: .5rem;
+  position: relative;
+  right: .5rem;
 }
 
 .stripeElement--invalid {
-    border-color: red;
+  border-color: red;
 }
 
 #payment-form .form-control,
 #card-element {
-    color: #000;
-    border: 1px solid #000;
+  color: #000;
+  border: 1px solid #000;
 }
