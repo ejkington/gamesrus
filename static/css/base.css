@@ -151,6 +151,10 @@ a {
     color: black;
 }
 
+.text-right {
+    text-align: right;
+}
+
 /* Toasts from bootstrap */
 
 .message-container {

@@ -31,7 +31,7 @@
                             <th scope="col"></th>
                             <th scope="col">Price</th>
                             <th scope="col">Quantity</th>
-                            <th scope="col">Subtotal</th>
+                            <th scope="col" class="text-right">Subtotal</th>
                         </tr>
                     </thead>
                     {% for item in bag_items %}
@@ -64,7 +64,7 @@
                                             </button>
                                         </div>
                                         <input type="number" class="form-control qty_input" name="quantity" value="0"
-                                            min="1" max="10" data-item_id="{{ item.item_id }}"
+                                            min="0" max="10" data-item_id="{{ item.item_id }}"
                                             id="id_qty_{{ item.item_id }}">
                                         <div class="input-group-append">
                                             <button class="increment-qty btn btn-black rounded-2"
