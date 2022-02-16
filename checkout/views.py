@@ -13,7 +13,7 @@ import stripe
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
-    
+
     if request.method == 'POST':
         bag = request.session.get('bag', {})
 
@@ -30,7 +30,7 @@ def checkout(request):
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save()
-            
+
             for item_id, item_data in bag.items():
                 try:
                     product = Product.objects.get(id=item_id)
@@ -86,13 +86,13 @@ def checkout_success(request, order_number):
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
     messages.success(request, f'Order successfully placed! your order number is {order_number} confirmation email has been sent to {order.email}')
-    
+
     if 'bag' in request.session:
         del request.session['bag']
-        
+
         template = 'checkout/checkout_success.html'
         context = {
             'order': order,
         }
-        
+
         return render(request, template, context)
