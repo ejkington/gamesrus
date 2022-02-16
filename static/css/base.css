@@ -313,7 +313,7 @@ a {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 20px;
     }
 }
 
@@ -321,7 +321,7 @@ a {
 
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 20px;
     }
 
     body {
