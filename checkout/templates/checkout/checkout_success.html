@@ -1,6 +1,6 @@
 {% extends "base.html" %}
-{% load crispy_forms_tags %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
@@ -23,7 +23,7 @@
             <h2 class="logo-font mb-4">Thank You</h2>
             <hr>
             <p class="text-black">Your order information is below. A confirmation email will be sent to
-                <strong>{{ order.email }}</strong>.</p>
+                {{ order.email }}.</p>
         </div>
     </div>
 
@@ -62,6 +62,11 @@
 
                 {% for item in order.lineitems.all %}
                 <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="small mb-0 text-black font-weight-bold">
+                            {{ item.product.name }}
+                        </p>
+                    </div>
                     <div class="col-12 col-md-8 text-md-right">
                         <p class="small mb-0">{{ item.quantity }} @ ${{ item.product.price }} each</p>
                     </div>
@@ -92,13 +97,13 @@
                     </div>
                 </div>
 
-                {% if order.street_adress2 %}
+                {% if order.street_address2 %}
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 text-black font-weight-bold">Adress 2</p>
                     </div>
                     <div class="col-12 col-md-8 text-md-right">
-                        <p class="mb-0">{{ order.street_adress2 }}</p>
+                        <p class="mb-0">{{ order.street_adress1 }}</p>
                     </div>
                 </div>
                 {% endif %}
@@ -158,7 +163,7 @@
 
                 <div class="row">
                     <div class="col-12 col-md-4">
-                        <p class="mb-0 text-black font-weight-bold">Delivery cost</p>
+                        <p class="mb-0 text-black font-weight-bold">Delivery</p>
                     </div>
                     <div class="col-12 col-md-8 text-md-right">
                         <p class="mb-0">{{ order.delivery_cost }}</p>
@@ -178,11 +183,11 @@
     </div>
     <div class="row">
         <div class="col-12 col-lg-7 text-right">
-            <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="btn btn-black rounded-0 my-2">
+            <a href="{% url 'products' %}" class="btn btn-black rounded-2 my-2">
                 <span class="icon mr-2">
-                    <i class="fas fa-gifts"></i>
+                    <i class="fa-light fa-gamepad"></i>
                 </span>
-                <span class="text-uppercase">Now check out the latest deals!</span>
+                <span class="text-uppercase">Checkout some more deals!</span>
             </a>
         </div>
     </div>
