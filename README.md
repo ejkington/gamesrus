@@ -174,3 +174,84 @@ Enviromental Variables such as API-keys, passwords etc are stored securely in th
 
 * requirements.txt - a list of dependancies (installed packages) that the project requires for the application to function
 
+
+## Data Models
+The following models have been used to populate the database and for the site to function as it should:
+
+* User - the built in Django User model, facilitates the users basic information
+
+* Category - the category in which the product is placed
+
+* Product - the model for the product itself and its details
+
+* Order - a users successful purchase leads to an instance of the Order model being created, storing delivery and user data
+
+* OrderLineItem - a model holding the product information for a single product, binding the product model together with the order
+
+* UserProfile - the model storing the users product and order information
+
+# Img of database schema for models (#)
+
+## Scope - Epics and User Stories
+Epic 1: Base functionality and ease of use
+As a user, the intention of the specific page is made clear to me, so that I know the purpose of that page
+
+As a user, I can access important links such as home, products, my bag, sign in/out, and my profile by scrolling and/or clicking once, regardless of where on the site * I am, so that i can easily navigate the site
+
+* As a user, I can see a link in the footer to the site’s Facebook Business Page, so that I can follow the company on Facebook
+
+* As a user, it is visible if I am signed in or not, so that I am made aware of this
+
+* As a user, the choices I make on the site are confirmed to me, so that I am always aware of them
+
+## Epic 2: Products
+* As a user, I can browse a list of products for sale on the site so that I can find the product I seek
+
+* As a user, i can perform a search, so that products matching the search appear in the products list
+
+* As a user, I can sort the products list by category, alphabetically or by rating, so that i can quickly find the product I seek
+
+* As a user, I can view the most important details of the product in the product list, such as category, price, rating, and image so that i know most details without having to click on the product
+
+* As a user, i can click the product in the products list so that I can view the products details
+
+## Epic 3: Bag
+* As a user, I can add a product to my bag by clicking ’Add to bag’ from the product detail page so that I can purchase the product
+
+* As a user, I can always see the total price of my bag in the navigation bar, so that I know what the total cost will be
+
+* As a user, i can adjust the quantity of the product chosen after adding it to the shopping cart in the order details
+
+* As a user, I can view the products added to my bag by clicking the bag icon or by adding an item to the bag
+
+* As a user, I can update the quantity or remove it completly
+
+## Epic 4: Checkout
+* As a user, I can click on Proceed to Checkout, so that I can purchase the items in my bag
+
+* As a logged in user, on the Checkout page, I can choose to save my delivery address to Profile if logged in, so that I can retain it for future orders
+
+* As a user, i can enter my card details on the checkout page, so that I can make the desired purchase
+
+* As a user, I am informed of whether my purchase was successful or not via the Order Successful page, as well as via an email sent upon order confirmation
+
+## Epic 5: User registration and account
+* As a user, I can register for an account on the site, so that I can gain all the site’s customer benefits
+
+* As a user, I am not able to access pages that require authentication if I am not signed in
+
+* As a user, I have to confirm my email address to complete my account registration
+
+* As a logged in user, i can view a My profile page, so that I can view my previous orders, and view and update my delivery and contact details
+
+* As a logged in user, I can add my delivery details to the profile page, so that it is my default delivery address for my order on the checkout page
+
+* As a logged in user, I can choose to delete my account, so that my user account no longer exists
+
+
+## Epic 6: Site Owner functionality
+* As a site owner, I can view an admin page, where I can perform batch editing of model instances on the site including products, categories, orders
+
+* As a site owner, I can add, edit or remove any product on the site
+
+* As a site owner, I can remove any products review on the site
