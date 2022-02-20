@@ -36,9 +36,9 @@ I have tried to implement the basic Agile strategy, creating issues for my user 
 As Github is limited with ways to do this, I had my user stories in a seperate file
 
 
-#User Experience
-##Strategy
-###Primary Goals
+# User Experience
+## Strategy
+## Primary Goals
 The site owners primary goals are:
 
 * To be able to sell the stores products online
