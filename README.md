@@ -1,7 +1,9 @@
 # Games R us
 
 
-### Games R us is an ecommerce web application for customers seeking to purchase gaming stuff online.
+# IM I RESPONSIVE ()
+
+### Games R us is an ecommerce web application for customers seeking to purchase pc gaming accessories online.
 
 This is the fifth and last portfolio project for the Code Institute Diploma in Fullstack Software Development.
 
@@ -34,9 +36,9 @@ I have tried to implement the basic Agile strategy, creating issues for my user 
 As Github is limited with ways to do this, I had my user stories in a seperate file
 
 
-#User Experience
-##Strategy
-###Primary Goals
+# User Experience
+## Strategy
+## Primary Goals
 The site owners primary goals are:
 
 * To be able to sell the stores products online
@@ -255,3 +257,183 @@ As a user, I can access important links such as home, products, my bag, sign in/
 * As a site owner, I can add, edit or remove any product on the site
 
 * As a site owner, I can remove any products review on the site
+
+
+# Existing Features 
+
+Feature 1: The Navbar
+The navbar allows users to easily navigate the website, no matter which page they are on. The navbar consists of:
+
+* The products navigation menu, with sorting or filtering possibilities
+* A search bar, displaying results based on product name
+* A Sign In/Sign Up icon
+* Bag
+
+![Navbar](readme/navbar1.png)
+![Navbar](readme/navbar2.png)
+
+If the user us logged in, the Sign Up/Sign In menu becomes the Account menu, and if the user has admin privileges the user can access the manage brands an add product or brand pages through here.
+
+There is a floating badge in the top right corner displaying the grand total and item count, always visible of the user scrolls up, that turns light green if items are added or in the bag,
+
+## User stories covered
+
+As a user, I can access important links such as home, products, my bag, sign in/out, and my profile by scrolling and/or clicking once, regardless of where on the site I am, so that i can easily navigate the site
+
+* As a user, it is visible if I am signed in or not, so that I am made aware of this
+
+* As a user, the choices I make on the site are confirmed to me, so that I am always aware of them
+
+* As a user, i can perform a search, so that products matching the search appear in the products list
+
+* As a user, I can always see the total price of my bag in the navigation bar, so that I know what the total cost will be
+
+* As a user, I can view the products added to my bag by clicking the cart icon or by adding an item to the cart
+
+* As a user, I am not able to access pages that require authentication if I am not signed in
+
+# Feature 2: The Landing Page
+The home page is the landing page of the site, with the purpose to entice the user to proceed to the products.
+
+![landingpage](readme/header1.png)
+
+The user is presented with a window-sized (half window on tablet/mobile) With a pink neon button that goes directly to all products.
+
+## User stories covered:
+
+* As a user, the intention of the specific page is made clear to me, so that I know the purpose of that page
+
+* As a user, I can access important links such as home, products, my bag, sign in/out, and my profile by scrolling and/or clicking once, regardless of where on the site I am, so that i can easily navigate the site
+
+* As a user, the choices I make on the site are confirmed to me, so that I am always aware of them
+
+# Feature 3: The Footer
+The footer includes a link to the site's Facebook business page and a button to go to all products,  Wherever the user is on the site, except for some account operations, the footer is visible at the bottom of the page, giving the user access to these important links at virtually all times.
+
+![footer](readme/footer.png)
+
+## User stories covered:
+
+As a user, I can see a link in the footer to the site’s Facebook Business Page, so that I can follow the company on Facebook
+
+As a user, I can quickly go to all products via the button
+
+As a user, I can see the copyrights of the page
+
+#Feature 4: The Products List
+The products list is dynamic and will show the relevant products, depending on if the user has performed a search, clicked on a category or filtered the products in any other way.
+
+![products1](readme/products1.png)
+![products2](readme/products2.png)
+
+Filtering can be done:
+
+By category
+By rgb
+By cordless
+By users performing a search
+On top of this, sorting can be done by price, rating, name or category. 
+
+In the products list, the most important details of each item are displayed; name, category, price, and of course the product image. For admin users. the edit and delete buttons are also visible here.
+User stories covered:
+
+## User stories covered:
+
+As a user, I can browse a list of products for sale on the site so that I can find the product I seek
+
+As a user, i can perform a search, so that products matching the search appear in the products list
+
+As a user, I can sort the products list by category, alphabetically or by rating, so that i can quickly find the product I seek
+
+As a user, I can view the most important details of the product in the product list, such as model, category, price, rating, and image so that i know most details without having to click on the product
+
+# Feature 5: The Product Detail Page
+This page shows a dedicated page for the specific product. Here users can choose the quantity of the product, as well as read a description and see the products rating.
+
+![productdetail](readme/productdetail.png)
+
+Here users can decide the quantityto be added to their bag.
+
+Admin users can edit and remove the product through links here.
+
+
+## User stories covered:
+
+As a user, i can click the product in the products list so that I can view the products details
+
+As a user, I can choose the quantity, so that I can purchase the correct quantity
+
+As a user, I can choose to checkout or to keep shopping, the bag is saved in the session
+
+As a user, I can see the price, category, image and rating of the product 
+
+## Feature 6: The Bag
+The Bag is the users digital shopping bag, containing all products the user has added to it and their details.
+
+![bagcontents(readme/bagcontents.png)
+
+Its grand total and count is always partially visible in the navbar but has a dedicated page through which users can go through with the payment when they are done shopping.
+
+A toast, a small dialog window at the top right, will be visible after adding an item to the bag, letting the user know that the add was successful. The user can view, change quantity and remove items from the bag on the bag page.
+
+## User stories covered:
+
+* As a user, I can add a product to my bag by clicking ’Add to Bag’ from the product detail page so that I can purchase the product
+
+* As a user, I can always see the total price of my bag in the navigation bar, so that I know what the total cost will be
+
+* As a user, i can adjust the quantity of the product chosen after adding it to the shopping bag
+
+* As a user, I can view the products added to my bag by clicking the bag icon or by adding an item to the 
+
+* As a user, I can click the update button, so that I can easily remove or increse quantity products from my bag
+
+
+## Feature 7: The Checkout Page
+The checkout page features a form for the user to fill in, with name, email, phone nr, delivery address and card details.
+
+![checkout(#)
+
+From the checkout page, if user is authenticated, they can save their details to their their profile so they are prefilled for the next order. If they are not logged in, a link to log in is displayed in place of that option.
+
+If the payment fails or info is sufficient, the user gets a new chance to enter their info, without being charged.
+
+
+## User stories covered:
+
+As a user, I can click on Proceed to Checkout, so that I can purchase the items in my bag
+
+As a logged in user, on the Checkout page, I can choose to save my delivery address to my profile, so that I can retain it for future orders
+
+As a user, i can enter my card details on the checkout page, so that I can make the desired purchase
+
+## Feature 8: The Order Successful Page
+If the user has made a successful purchase, an order confirmation will be displayed to the user, and sent to the given email address during checkout. If the order was successful, the bag will be emptied
+
+In the confirmation, the user can view the items order, their quantity, an order number, grand total and delivery details.
+
+![checkout(#)
+
+## User stories covered:
+
+As a user, I am informed of whether my purchase was successful or not via the Order Successful page, as well as via an email sent upon order confirmation
+
+## Feature 9: The Sign Up/In/Out Pages
+Signing up, in and out are vital parts of this site, allowing users to save customer details to improve the users experience of the site. It also creates a possibility for the site owner to gain revisiting customers.
+
+![checkout(#)
+
+Users can easily sign up through the link in the navbar.
+
+As users browse the site, they will see various links to sign in to access functionality saving delivery details
+
+Upon registration, the site sends an email to confirm the users email address. They then can sign in to the site and access their profile and all other functionality for signed in users.
+
+## User stories covered:
+
+As a user, I can register for an account on the site, so that I can gain all the site’s customer benefits
+
+As a user, If I am not signed in, I am redirected to sign in/up if I click on any of the links or buttons restricted to logged in users
+
+As a user, I have to confirm my email address to complete my account registration
+
