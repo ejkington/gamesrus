@@ -3,7 +3,7 @@
 
 # IM I RESPONSIVE ()
 
-### Games R us is an ecommerce web application for customers seeking to purchase gaming stuff online.
+### Games R us is an ecommerce web application for customers seeking to purchase pc gaming accessories online.
 
 This is the fifth and last portfolio project for the Code Institute Diploma in Fullstack Software Development.
 
@@ -387,3 +387,53 @@ A toast, a small dialog window at the top right, will be visible after adding an
 * As a user, I can view the products added to my bag by clicking the bag icon or by adding an item to the 
 
 * As a user, I can click the update button, so that I can easily remove or increse quantity products from my bag
+
+
+## Feature 7: The Checkout Page
+The checkout page features a form for the user to fill in, with name, email, phone nr, delivery address and card details.
+
+![checkout(#)
+
+From the checkout page, if user is authenticated, they can save their details to their their profile so they are prefilled for the next order. If they are not logged in, a link to log in is displayed in place of that option.
+
+If the payment fails or info is sufficient, the user gets a new chance to enter their info, without being charged.
+
+
+## User stories covered:
+
+As a user, I can click on Proceed to Checkout, so that I can purchase the items in my bag
+
+As a logged in user, on the Checkout page, I can choose to save my delivery address to my profile, so that I can retain it for future orders
+
+As a user, i can enter my card details on the checkout page, so that I can make the desired purchase
+
+## Feature 8: The Order Successful Page
+If the user has made a successful purchase, an order confirmation will be displayed to the user, and sent to the given email address during checkout. If the order was successful, the bag will be emptied
+
+In the confirmation, the user can view the items order, their quantity, an order number, grand total and delivery details.
+
+![checkout(#)
+
+## User stories covered:
+
+As a user, I am informed of whether my purchase was successful or not via the Order Successful page, as well as via an email sent upon order confirmation
+
+## Feature 9: The Sign Up/In/Out Pages
+Signing up, in and out are vital parts of this site, allowing users to save customer details to improve the users experience of the site. It also creates a possibility for the site owner to gain revisiting customers.
+
+![checkout(#)
+
+Users can easily sign up through the link in the navbar.
+
+As users browse the site, they will see various links to sign in to access functionality saving delivery details
+
+Upon registration, the site sends an email to confirm the users email address. They then can sign in to the site and access their profile and all other functionality for signed in users.
+
+## User stories covered:
+
+As a user, I can register for an account on the site, so that I can gain all the site’s customer benefits
+
+As a user, If I am not signed in, I am redirected to sign in/up if I click on any of the links or buttons restricted to logged in users
+
+As a user, I have to confirm my email address to complete my account registration
+
