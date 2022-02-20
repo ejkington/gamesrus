@@ -2,10 +2,9 @@
 /*globals $:false */
 
 /*
-    Core logic/payment flow for this comes from below
-    (and the Boutique Ado project, Code Institute)
+    Core logic/payment flow for this comes from here:
     https://stripe.com/docs/payments/accept-a-payment
-    CSS from here (but customized): 
+    CSS from here: 
     https://stripe.com/docs/stripe-js
 */
 
@@ -58,6 +57,8 @@ form.addEventListener('submit', function (ev) {
         'disabled': true
     });
     $('#submit-button').attr('disabled', true);
+    $('#payment-form').fadeToggle('slow');
+    $('#loading-overlay').fadeToggle('slow');
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
             card: card,
@@ -71,6 +72,8 @@ form.addEventListener('submit', function (ev) {
                 </span>
                 <span>${result.error.message}</span>`;
             $(errorDiv).html(html);
+            $('#payment-form').fadeToggle('slow');
+            $('#loading-overlay').fadeToggle('slow');
             card.update({
                 'disabled': false
             });
