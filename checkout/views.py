@@ -21,7 +21,7 @@ import stripe
 # pylint: disable=broad-except, invalid-name
 # pylint: disable=pointless-string-statement, no-member
 
-@require_POST(request)
+@require_POST
 def cache_checkout_data(request):
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
@@ -52,8 +52,8 @@ def checkout(request):
             'country': request.POST['country'],
             'postcode': request.POST['postcode'],
             'town_or_city': request.POST['town_or_city'],
-            'street_adress1': request.POST['street_adress1'],
-            'street_adress2': request.POST['street_adress2'],
+            'street_address1': request.POST['street_address1'],
+            'street_address2': request.POST['street_address2'],
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
