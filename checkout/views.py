@@ -3,23 +3,24 @@ checkout/views.py: views to process an order made on the site.
 Most of the code is from the Code Institute
 Boutique Ado project.
 """
+import json
+import stripe
+
 
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.contrib import messages
 from django.conf import settings
 from django.views.decorators.http import require_POST
 
-
-from .forms import OrderForm
-from products.models import Product
-from .models import OrderLineItem, Order
 from bag.contexts import bag_contents
+from products.models import Product
+from .forms import OrderForm
+from .models import OrderLineItem, Order
 
-import json
-import stripe
 
 # pylint: disable=broad-except, invalid-name
 # pylint: disable=pointless-string-statement, no-member
+
 
 @require_POST
 def cache_checkout_data(request):
@@ -33,9 +34,10 @@ def cache_checkout_data(request):
         })
         return HttpResponse(status=200)
     except Exception as e:
-        message.error(request, 'Your payment cannot be proccessed right now, \
+        messages.error(request, 'Your payment cannot be proccessed right now, \
             try again at a later time.')
         return HttpResponse(content=e, status=400)
+
 
 def checkout(request):
 
