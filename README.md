@@ -31,9 +31,9 @@ The focus points for this application are ecommerce, using the Django framework 
 ## Agile Workflow
 
 
-I have tried to implement the basic Agile strategy, creating issues for my user stories,
+I have tried to implement the basic Agile strategy
 
-As Github is limited with ways to do this, I had my user stories in a seperate file
+I used github for userstories and a separete file 
 
 
 # User Experience
