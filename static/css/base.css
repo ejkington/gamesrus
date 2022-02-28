@@ -229,12 +229,36 @@ a {
     overflow-y: auto;
 }
 
+/* allauth form formating */
+
+.allauth-form-inner-content p {
+    color: var(--clr-neon);
+    margin-top: 1.3rem;
+}
+
+.allauth-form-inner-content p {
+    border-color: #000;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content lable:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: red;
+}
+
 /* button in footer */
 
 .btn-blue:hover {
     font-weight: bold;
     text-shadow: 0 0 5px rgba(0, 0, 0, .5);
     box-shadow: 0 0 5px white;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #000;
 }
 
 .btn-blue {
