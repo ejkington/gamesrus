@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
+import mimetypes
 from pathlib import Path
 import dj_database_url
 
@@ -26,7 +27,7 @@ SECRET_KEY = 'xj&omd@a=)g4-#zwk7tnpeyf_&=b5jnht6aeo6a6a#w(=tp=5m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["ejkington-gamesruz.herokuapp.com", "localhost"]
+ALLOWED_HOSTS = ["ejkington-gamesrus.herokuapp.com", "localhost"]
 
 
 # Application definition
@@ -182,6 +183,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+
+# mimetype bug fix
+mimetypes.add_type("text/css", ".css", True)
+mimetypes.add_type("text/html", ".html", True)
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
