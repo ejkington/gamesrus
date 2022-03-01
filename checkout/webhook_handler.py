@@ -7,8 +7,8 @@ from django.conf import settings
 from django.core.mail import send_mail
 
 from products.models import Product
-from .models import Order, OrderLineItem
 from profiles.models import UserProfile
+from .models import Order, OrderLineItem
 
 
 class StripeWH_Handler:
@@ -26,7 +26,7 @@ class StripeWH_Handler:
         )
         body = render_to_string(
             'checkout/templates/confirmation_emails/confirmation_email.body.txt',
-            {'order': order, 
+            {'order': order,
              'contact_email': settings.DEFAULT_FROM_EMAIL})
         send_mail(
             subject,
@@ -34,7 +34,7 @@ class StripeWH_Handler:
             settings.DEFAULT_FROM_EMAIL,
             [customer_email]
         )
-        
+
     def handle_event(self, event):
         """
         Handle a generic/unknown/unexpected webhook event
@@ -60,7 +60,7 @@ class StripeWH_Handler:
         for field, value in shipping_details.address.items():
             if value == "":
                 shipping_details.address[field] = None
-                
+
         # updates userprofile info if save_info is checked when checking out
         profile = None
         username = intent.metadata.username
@@ -76,7 +76,6 @@ class StripeWH_Handler:
                 profile.default_street_address1 = shipping_details.address.line1
                 profile.default_street_address2 = shipping_details.address.line2
                 profile.save()
-            
 
         order_exists = False
         attempt = 1
@@ -144,7 +143,7 @@ class StripeWH_Handler:
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
-                self._send_confirmation_email(order)
+            self._send_confirmation_email(order)
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
             status=200)

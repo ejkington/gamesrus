@@ -38,14 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    
+
     # Imported
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'crispy_forms',
-    
-    # Local apps 
+
+    # Local apps
     'home',
     'products',
     'bag',
@@ -185,4 +185,4 @@ STRIPE_CURRENCY = 'usd'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
-
+DEFAULT_FROM_EMAIL = 'gamesrus@example.com'
