@@ -71,7 +71,7 @@ def product_detail(request, product_id):
 def add_product(request):
     """ Adds product to the store as a superuser """
     form = ProductForm()
-    template = 'product/add_product.html'
+    template = 'products/add_product.html'
     context = {
         'form': form,
     }
