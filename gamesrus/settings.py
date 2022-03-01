@@ -27,7 +27,7 @@ SECRET_KEY = 'xj&omd@a=)g4-#zwk7tnpeyf_&=b5jnht6aeo6a6a#w(=tp=5m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["ejkington-gamesrus.herokuapp.com", "localhost"]
+ALLOWED_HOSTS = ["ejkington-gamesruz.herokuapp.com", "localhost"]
 
 
 # Application definition
