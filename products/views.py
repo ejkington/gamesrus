@@ -80,12 +80,12 @@ def add_product(request):
             messages.error(request, 'Failed to add product, check your form and try again!')
     else:
         form = ProductForm()
-    
+
     template = 'products/add_product.html'
     context = {
         'form': form,
     }
-    
+
     return render(request, template, context)
 
 
@@ -103,19 +103,19 @@ def edit_product(request, product_id):
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You Are Editing {product.name}')
-    
+
     template = 'products/edit_product.html'
     context = {
         'form': form,
         'product': product,
     }
-    
+
     return render(request, template, context)
 
 
 def delete_product(request, product_id):
-    """ Deletes product from the store """
+    """ Delete a product from the store """
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
-    messages.success(request, 'Product deleted from store!')
+    messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
