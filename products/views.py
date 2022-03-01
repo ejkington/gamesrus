@@ -99,7 +99,7 @@ def add_product(request):
 @login_required
 def edit_product(request, product_id):
     """ edits product """
-      if not request.user.is_superuser:
+    if not request.user.is_superuser:
         messages.error(request, 'Only store admins can access this page!')
         return redirect(reverse('home'))
     
@@ -128,7 +128,7 @@ def edit_product(request, product_id):
 @login_required
 def delete_product(request, product_id):
     """ Delete a product from the store """
-      if not request.user.is_superuser:
+    if not request.user.is_superuser:
         messages.error(request, 'Only store admins can access this page!')
         return redirect(reverse('home'))
     
