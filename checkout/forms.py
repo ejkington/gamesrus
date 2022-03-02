@@ -1,9 +1,20 @@
+"""
+checkout/forms.py: forms for the checkout app.
+Credit to Code Institute's Boutique Ado project.
+"""
+
 from django import forms
 from .models import Order
 
 
 class OrderForm(forms.ModelForm):
+    """
+    Form to manage the users info on placing an order
+    """
     class Meta:
+        """
+        Meta class defining the model and fields for the form
+        """
         model = Order
         fields = ('full_name', 'email', 'phone_number',
                   'street_address1', 'street_address2',

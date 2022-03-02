@@ -1,3 +1,9 @@
+"""
+checkout/webhook_handler.py: Contains the class StripeWH_Handler
+that takes care of sending a webhook to stripe, making sure that the
+process is done safely. Credit: Code Institute Boutique Ado, Stripe
+"""
+
 import json
 import time
 
@@ -12,13 +18,17 @@ from .models import Order, OrderLineItem
 
 
 class StripeWH_Handler:
-    """Handle Stripe webhooks"""
+    """
+    Handle Stripe webhooks
+    """
 
     def __init__(self, request):
         self.request = request
 
     def _send_confirmation_email(self, order):
-        """ Sends email confirmation to users email """
+        """ 
+        Sends email confirmation to users email
+        """
         customer_email = order.email
         subject = render_to_string(
             'checkout/templates/confirmation_emails/confirmation_email_subject.txt',

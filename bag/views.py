@@ -1,16 +1,27 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+"""
+bag/views.py: views to display the shopping bag page and add/update/remove
+functionality for it. Most of the code is from the Code Institute
+Boutique Ado project.
+"""
+
+from django.shortcuts import (
+    render, redirect, reverse, HttpResponse, get_object_or_404)
 from django.contrib import messages
 
 from products.models import Product
 
 
 def view_bag(request):
-    """ view for showing the bag contents page """
+    """ 
+    view for showing the bag contents page 
+    """
     return render(request, 'bag/bag.html')
 
 
 def add_to_bag(request, item_id):
-    """ Add items to bag """
+    """ 
+    Add items to bag 
+    """
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -19,7 +30,8 @@ def add_to_bag(request, item_id):
 
     if item_id in list(bag.keys()):
         bag[item_id] += quantity
-        messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
+        messages.success(
+            request, f'Updated {product.name} quantity to {bag[item_id]}')
     else:
         bag[item_id] = quantity
         messages.success(request, f'Added {product.name} to your bag')
@@ -29,7 +41,9 @@ def add_to_bag(request, item_id):
 
 
 def adjust_bag(request, item_id):
-    """Adjust the quantity of the specified product to the specified amount"""
+    """
+    Adjust the quantity of the specified product to the specified amount
+    """
 
     quantity = int(request.POST.get('quantity'))
     if 'quantity' in request.POST:
@@ -54,7 +68,9 @@ def adjust_bag(request, item_id):
 
 
 def remove_from_bag(request, item_id):
-    """Remove item from the shopping bag"""
+    """
+    Remove item from the shopping bag
+    """
 
     try:
         bag = request.session.get('bag', {})

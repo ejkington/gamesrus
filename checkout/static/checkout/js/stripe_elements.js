@@ -1,10 +1,17 @@
+/**
+ * checkout.stripe_elements.js - Manages stripe front-end operations:
+ * styling the stripe elements, gets users order data, and disabling or
+ * showing elements on the checkout page depending on the users actions.
+ */
+
 /*jshint esversion: 6 */
 /*globals $:false */
 
 /*
-    Core logic/payment flow for this comes from here:
+    Core logic/payment flow for this comes from below
+    (and the Boutique Ado project, Code Institute)
     https://stripe.com/docs/payments/accept-a-payment
-    CSS from here: 
+    CSS from here (but customized): 
     https://stripe.com/docs/stripe-js
 */
 

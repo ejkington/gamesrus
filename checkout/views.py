@@ -7,7 +7,8 @@ import json
 import stripe
 
 
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse)
 from django.contrib import messages
 from django.conf import settings
 from django.views.decorators.http import require_POST
@@ -26,6 +27,10 @@ from .models import OrderLineItem, Order
 
 @require_POST
 def cache_checkout_data(request):
+    """
+    This function caches the bag, order and user data if and catches an error
+    if it doesn't go through.
+    """
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -42,7 +47,10 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
-
+    """
+    This function processes the checkout: the bag contents, user info and
+    the payment, validating it in the process.
+    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -84,9 +92,11 @@ def checkout(request):
                     order.delete()
                     return redirect(reverse('view.bag'))
             request.session['save_info'] = 'save_info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse(
+                'checkout_success', args=[order.order_number]))
         else:
-            messages.error(request, 'An error was found in your form, please double check your information and try again.')
+            messages.error(
+                request, 'An error was found in your form, please double check your information and try again.')
     else:
         bag = request.session.get('bag', {})
         if not bag:
@@ -135,7 +145,9 @@ def checkout(request):
 
 
 def checkout_success(request, order_number):
-    """ Handles success checkouts """
+    """ 
+    Handles success checkouts
+    """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
@@ -160,7 +172,8 @@ def checkout_success(request, order_number):
         if user_profile_form.is_valid():
             user_profile_form.save()
 
-    messages.success(request, f'Order successfully placed! your order number is {order_number} confirmation email has been sent to {order.email}')
+    messages.success(
+        request, f'Order successfully placed! your order number is {order_number} confirmation email has been sent to {order.email}')
 
     if 'bag' in request.session:
         del request.session['bag']

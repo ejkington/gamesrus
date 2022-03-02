@@ -9,7 +9,10 @@ from .forms import ProductForm
 
 
 def all_products(request):
-    """ A view to show all products, including sorting and search """
+    """
+    A view to show all products,
+    including sorting and search
+    """
 
     products = Product.objects.all()
     query = None
@@ -35,6 +38,7 @@ def all_products(request):
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
+            # pylint: disable=no-member
             categories = Category.objects.filter(name__in=categories)
 
         if 'q' in request.GET:
@@ -59,7 +63,9 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ view to show product details """
+    """ 
+    view to show product details
+    """
 
     product = get_object_or_404(Product, pk=product_id)
 
@@ -72,11 +78,13 @@ def product_detail(request, product_id):
 
 @login_required
 def add_product(request):
-    """ Adds product to the store as a superuser """
+    """
+    Adds product to the store as a superuser 
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Only store admins can access this page!')
         return redirect(reverse('home'))
-    
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -84,7 +92,8 @@ def add_product(request):
             messages.success(request, 'Product added successfully!')
             return redirect(reverse('add_product'))
         else:
-            messages.error(request, 'Failed to add product, check your form and try again!')
+            messages.error(
+                request, 'Failed to add product, check your form and try again!')
     else:
         form = ProductForm()
 
@@ -98,11 +107,13 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ edits product """
+    """ 
+    edits product 
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Only store admins can access this page!')
         return redirect(reverse('home'))
-    
+
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
@@ -111,7 +122,8 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product, Check that form is valid!')
+            messages.error(
+                request, 'Failed to update product, Check that form is valid!')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You Are Editing {product.name}')
@@ -127,12 +139,15 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ Delete a product from the store """
+    """ 
+    Delete a product from the store 
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Only store admins can access this page!')
         return redirect(reverse('home'))
-    
+
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
+
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
