@@ -187,7 +187,7 @@ if 'USE_AWS' in os.environ:
     
     AWS_S3_OBJECT_PARAMETERS = {
         'Expires': 'Fri, 31 Dec 2099 20:00:00 GMT',
-        'Cachecontrol': 'max-age=94608000',
+        'CacheControl': 'max-age=94608000',
     }
     
     # Bucket Config
