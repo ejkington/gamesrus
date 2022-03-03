@@ -67,7 +67,7 @@ The site owners primary goals are:
 
 * To be able to edit their account details or remove their account
 
-* To easily navigate the whole website and keep track of all user interactions, for example the products in their cart and how much they are to spend
+* To easily navigate the whole website and keep track of all user interactions, for example the products in their bag and how much they are to spend
 
 # Business Model
 I have chosen a traditional B2C (Business to Customer without middle person) application, which has a straightforward and user friendly interface. This online store offers no products of their own and relies on the wholesale of branded products. A real world version of the store would list all the retailers it is affiliated with.
@@ -233,7 +233,7 @@ As a user, I can access important links such as home, products, my bag, sign in/
 
 * As a user, I can always see the total price of my bag in the navigation bar, so that I know what the total cost will be
 
-* As a user, i can adjust the quantity of the product chosen after adding it to the shopping cart in the order details
+* As a user, i can adjust the quantity of the product chosen after adding it to the shopping bag in the order details
 
 * As a user, I can view the products added to my bag by clicking the bag icon or by adding an item to the bag
 
@@ -299,7 +299,7 @@ As a user, I can access important links such as home, products, my bag, sign in/
 
 * As a user, I can always see the total price of my bag in the navigation bar, so that I know what the total cost will be
 
-* As a user, I can view the products added to my bag by clicking the cart icon or by adding an item to the cart
+* As a user, I can view the products added to my bag by clicking the bag icon or by adding an item to the bag
 
 * As a user, I am not able to access pages that require authentication if I am not signed in
 
@@ -731,7 +731,7 @@ Passed testing of this user story is displayed in user story 13, where adding th
 * Clicking on the bag icon in the navbar
 * Being shown the bag page
 * Changing the quantity of the product and clicking Update
-* The cart items and quantity are displayed both in the toast message at the top and on the bag page
+* The bag items and quantity are displayed both in the toast message at the top and on the bag page
 
 * Conclusion, User story 15 and 16 - tests passed
 
@@ -865,7 +865,7 @@ For example, an admin user can change the products in an order that has already 
 
 #### Editing a product
 
-* Admin clicks the Edit button, either on the product cart in the Products page or at the top of the Product detail page
+* Admin clicks the Edit button, either on the product bag in the Products page or at the top of the Product detail page
 * User is presented with the products current details in the product form and can edit it
 * User clicks on Update Product
 * If the form is valid, user is taken to the newly edited products Product Detail page
