@@ -976,3 +976,149 @@ Performance was tested using Google Chrome's Lighthouse tool in DevTools built i
 ![orderhistory](readme/desktophistory.png)
 
 
+## Validation
+
+Thourough validation of all code was made without errors. The results can be viewed
+
+The languages tested are:
+
+Python (validation performed with PEP8)
+JavaScript (validation performed with JSHint)
+HTML (validation performed with W3 HTML Validator)
+CSS (validation performed with W3 Jigsaw CSS Validator)
+
+The Python code was validated with the PEP8 Online tool. All files tested with 0 errors. See the results below.
+
+## Home App
+home/apps.py
+![apps](readme/Python validate/python/validatorhomeview.png)
+
+home/urls.py
+![urls](readme/Python validate/python/validateurl.png)
+
+home/views.py
+![views](readme/Python validate/python/validatorhomeview.png)
+
+## Products app
+
+product/views.py
+![views](readme/Python validate/python/product/views.png)
+
+product/urls.py
+![views](readme/Python validate/python/product/urls.png)
+
+product/models.py
+![views](readme/Python validate/python/product/models.png)
+
+product/admin.py
+![views](readme/Python validate/python/product/admin.png)
+
+product/forms.py
+![views](readme/Python validate/python/product/forms.png)
+
+## Bag app
+
+product/views.py
+![views](readme/Python validate/python/bag/views.png)
+
+product/context.py
+![views](readme/Python validate/python/bag/context.png)
+
+product/urls.py
+![views](readme/Python validate/python/bag/urls.png)
+
+## Checkout app
+
+checkout/admin.py
+![admin](readme/Python validate/python/checkout/admin.png)
+
+checkout/forms.py
+![forms](readme/Python validate/python/checkout/forms.png)
+
+checkout/models.py
+![models](readme/Python validate/python/checkout/models.png)
+
+checkout/signals.py
+![signals](readme/Python validate/python/checkout/signals.png)
+
+checkout/views.py
+![views](readme/Python validate/python/checkout/views.png)
+
+checkout/webhook_handler.py
+![webhook_handler](readme/Python validate/python/checkout/webhook_handler.png)
+
+checkout/webhooks.py
+![webhooks](readme/Python validate/python/checkout/webhooks.png)
+
+## Profiles app
+
+profiles/forms.py
+![forms](readme/Python validate/python/profile/forms.png)
+
+profiles/models.py
+![models](readme/Python validate/python/profile/models.png)
+
+profiles/views.py
+![views](readme/Python validate/python/profile/views.png)
+
+## JSHint JavaScript Validation
+
+country_field.js
+![country](readme/Jsvalidate/country_field.png)
+
+result_sorting.js
+![result](readme/Jsvalidate/result_sorting.png)
+
+stripe_elements.js
+![elements](readme/Jsvalidate/stripe_elements.png)
+
+## W3C Jigsaw Validation
+
+base.css
+![base](readme/css/base.png)
+
+checkout.css
+![checkout](readme/css/checkout.png)
+
+profile.css
+![profile](readme/css/profile.png)
+
+
+## W3C HTML Validation
+
+he HTML code was validated with the W3C Validator. As the HTML files are never a single HTML file in this case, using Django and a base.html file as a base for all pages, I am referring to the pages as their name instead of the actual file name.
+
+
+
+
+## Bugs
+
+Oh the bugs. i cant count the number of bugs caused by misspelling or bad intendation, missed underscore or hyfen, missed space on a django template tag
+the good part is that iv gotten really good at reading error messages provided, 
+
+* overlay when payment is loading dident work as intended (Fixed by changing jquery from slim)
+
+
+# Credits
+
+Code Much of the coding and testing relies heavily on information in the "Botique Ado" walkthrough in the Code Institue Full Stack Frameworks module.
+
+
+Copyrights
+Media
+Images of the products is from spel och sånt https://spelochsant.se 
+with their consent.
+
+Index image is from unsplash 
+
+Content
+All products price, description, images is from https://spelochsant.se
+
+## Acknowledgments
+I want to thank my mentor Brian Macharia pointing me in the right directions. Also John_veniah project stepUp shoes has given me tips on some of the elements on this site
+My friends and family that suports me the best they can
+My girlfriend who iv seen far less then usual
+
+and all the tutors working at codeinstitute
+
+
