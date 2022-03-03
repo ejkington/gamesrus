@@ -146,7 +146,7 @@ These pages are provided by the Allauth package of the Django framework, but are
 * Various pages for email verification and password reset, etc
 
 ## Technical Design
-###Code Structure
+### Code Structure
 I have devided the code into apps as per Django best practice, for the different areas of functionality.
 
 * Home - basic functionality for the home page
