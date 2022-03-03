@@ -991,75 +991,76 @@ The Python code was validated with the PEP8 Online tool. All files tested with 0
 
 ## Home App
 home/apps.py
-![apps](readme/Python validate/python/validatorhomeview.png)
+![apps](readme/Python_validate/python/validatorhomeview.png)
 
 home/urls.py
-![urls](readme/Python validate/python/validateurl.png)
+![urls](readme/Pythonvalidate/python/validateurl.png)
 
+![profile](readme/profile.png)
 home/views.py
 ![views](readme/Python validate/python/validatorhomeview.png)
 
 ## Products app
 
 product/views.py
-![views](readme/Python validate/python/product/views.png)
+![views](readme/python/product/views.png)
 
 product/urls.py
-![views](readme/Python validate/python/product/urls.png)
+![views](readme/python/product/urls.png)
 
 product/models.py
-![views](readme/Python validate/python/product/models.png)
+![views](readme/python/product/models.png)
 
 product/admin.py
-![views](readme/Python validate/python/product/admin.png)
+![views](readme/python/product/admin.png)
 
 product/forms.py
-![views](readme/Python validate/python/product/forms.png)
+![views](readme/python/product/forms.png)
 
 ## Bag app
 
 product/views.py
-![views](readme/Python validate/python/bag/views.png)
+![views](readme/python/bag/views.png)
 
 product/context.py
-![views](readme/Python validate/python/bag/context.png)
+![views](readme/python/bag/context.png)
 
 product/urls.py
-![views](readme/Python validate/python/bag/urls.png)
+![views](readme/python/bag/urls.png)
 
 ## Checkout app
 
 checkout/admin.py
-![admin](readme/Python validate/python/checkout/admin.png)
+![admin](readme/python/checkout/admin.png)
 
 checkout/forms.py
-![forms](readme/Python validate/python/checkout/forms.png)
+![forms](readme/python/checkout/forms.png)
 
 checkout/models.py
-![models](readme/Python validate/python/checkout/models.png)
+![models](readme/python/checkout/models.png)
 
 checkout/signals.py
-![signals](readme/Python validate/python/checkout/signals.png)
+![signals](readme/python/checkout/signals.png)
 
 checkout/views.py
-![views](readme/Python validate/python/checkout/views.png)
+![views](readme/python/checkout/views.png)
 
 checkout/webhook_handler.py
-![webhook_handler](readme/Python validate/python/checkout/webhook_handler.png)
+![webhook_handler](readme/python/checkout/webhook_handler.png)
 
 checkout/webhooks.py
-![webhooks](readme/Python validate/python/checkout/webhooks.png)
+![webhooks](readme/python/checkout/webhooks.png)
 
 ## Profiles app
 
 profiles/forms.py
-![forms](readme/Python validate/python/profile/forms.png)
+![forms](readme/python/profile/forms.png)
 
 profiles/models.py
-![models](readme/Python validate/python/profile/models.png)
+![models](readme/python/profile/models.png)
 
 profiles/views.py
-![views](readme/Python validate/python/profile/views.png)
+![views](readme/python/profile/views.png)
 
 ## JSHint JavaScript Validation
 
