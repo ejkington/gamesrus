@@ -876,3 +876,103 @@ For example, an admin user can change the products in an order that has already 
 * User clicks Delete Product and is notified via a toast that the product is removed
 
 Conclusion, User story 28 - tests passed
+
+## Other Services
+
+### Stripe
+Stripe was used as a payment service, allowing users to pay for products. The process:
+
+* Create an account at https://stripe.com/
+* Go to the developers pane and navigate to API keys
+* Copy the publishable and secret keys and put them in your config vars in your development envirenment (and in Heroku config vars in production)
+
+Webhooks were created too to make sure payments did not fail due to web errors. This can be done by doing the following:
+
+* Navigate to Webhooks on the page, and create an endpoint with the url you send your webhooks to, in this case, the url is https://gamesruz.herokuapp.com/checkout/wh/
+* Add events to listen for, for example payment_intent_succeeded and payment_intent.payment_failed as in this case, in delvelopment and for all events in the live site
+* The webhooks should be sent when processing orders in all cases
+
+
+## Deployment
+
+#### Forking the GitHub Repository
+To make a clone, or 'Fork' this repository, follow the steps below.
+
+* Access your GitHub account and find the relevant repository.
+* Click on 'Fork' on the top right of the page.
+* You will find a copy of the repository in your own Github account
+
+#### Making a Local Clone
+* Access your GitHub account and find the relevant repository.
+* Click the 'Code' button next to 'Add file'.
+* To clone the repository using HTTPS, under clone with HTTPS, copy the link.
+* Open Git Bash.
+* Access the directory you want the clone to be have.
+* In your IDE's terminal type 'git clone' and the paste the URL you copied.
+* Press Enter.
+* You now have a local clone.
+
+### Heroku
+This application has been deployed from Github using Heroku. Here's how:
+
+* Create an account at heroku.com
+* Create a new app, add app name and your region
+* Click on create app
+* Go to "Settings"
+* Under Config Vars, add your sensitive data (creds.json for example)
+* Go to "Deploy" and at "Deployment method", click on "Connect to Github"
+* Enter your repository name and click on it when it shows below
+* Choose the branch you want to buid your app from
+* If desired, click on "Enable Automatic Deploys", which keeps the app up to date with your Github repository
+
+### AWS S3
+The deployed version of this website has static(CSS and JavaScript) and media files hosted to it via a web based service called Amazon Web Services S3 Bucket.
+
+The steps to take are:
+
+* Create an account at aws.amazon.com
+* Navigate to the IAM application and create a user and group
+* Set the AmazonS3FullAccess for the user and copy the AWS ACCESS and SECRET keys as config vars to your workspace and deployment environment
+* Create a new Bucket within the S3 application with an appropriate name.
+* Enable public access for your bucket so users can access and use the services on your website (upload, view, download, etc). More info can be read in the official documentation: https://aws.amazon.com/s3/
+
+### Performance
+Performance was tested using Google Chrome's Lighthouse tool in DevTools built into the browser. 
+
+#### Home
+#### Mobile
+![Home](readme/lighthome.png)
+#### Desktop
+![Home](readme/desktophome.png)
+
+### Products
+#### Mobile
+![Products](readme/lightproducts.png)
+#### Desktop
+![Products](readme/desktopproducts.png)
+
+### Product Detail
+#### Mobile
+![product Detail](readme/lightdetails.png)
+#### Desktop
+![product Detail](readme/desktopdetails.png)
+
+### Bag
+#### Mobile
+![bag](readme/lightbag.png)
+#### Desktop
+![bag](readme/desktopbag.png)
+
+### Checkout
+#### Mobile
+![checkout](readme/lightcheckout.png)
+#### Desktop
+![checkout](readme/desktopcheckout.png)
+
+### Order History
+#### Mobile
+![orderhistory](readme/lighthistory.png)
+#### Desktop
+![orderhistory](readme/desktophistory.png)
+
+
