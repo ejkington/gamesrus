@@ -19,8 +19,11 @@ You can test the card payment functionality without making a purchase. Use card 
 * Username: Admin
 
 
-You can view the deployed site [Link to Live Website](#)
-Github repo [GitHub Repo](#)
+You can view the deployed site 
+[Link to Live Website](https://gamesruz.herokuapp.com/)
+
+Github repo 
+[GitHub Repo](https://github.com/ejkington/gamesrus)
 
 # Project Overview
 Games R Us is an assignment for the Code Institute Diploma in Full Stack Software Development, but also meant to be applicable in a real world scenario (except for the products being fictional of course).
@@ -33,7 +36,10 @@ The focus points for this application are ecommerce, using the Django framework 
 
 I have tried to implement the basic Agile strategy
 
-I used github for userstories and a separete file 
+I used github for userstories and a separete file and used the github kanban board
+![kanban](readme/kanban.png)
+
+I have tried to implement the basic Agile strategy, creating issues for my user stories, a Kanban board for the project.
 
 
 # User Experience
@@ -83,7 +89,7 @@ This site has a Facebook Business page with a link on the page footer. It can be
 
 I have also done some research on highest searched words in Gaming retailing, and came up with this title and description:
 
-# (img of meta data with search keywords)
+![SEO](readme/Metatags.png)
 
 # Structure
 This website has 11 custom built pages and 16 (not all are used) account operations Django Allauth pages. The navbar at the top of the screen gives users access to the most important pages at all times.
@@ -120,11 +126,13 @@ This website has 11 custom built pages and 16 (not all are used) account operati
 
 ### Accessible to Admin users
 
-* Add Brand or Product - This is where admin users can add new products to the website
+* Add Product - This is where admin users can add new products to the website
 
 * Edit Product - The page for admins to edit or delete products
 
 * Manage products - An overview of all products on the site with edit and remove functionality
+
+* In the django admin, admins can further. Add new products, categories, view orders made, and manage signed up users
 
 ## Pages provided by Django
 These pages are provided by the Allauth package of the Django framework, but are customised by me to fit in with the rest of the site. Read more about Allauth here
@@ -176,6 +184,9 @@ Enviromental Variables such as API-keys, passwords etc are stored securely in th
 
 * requirements.txt - a list of dependancies (installed packages) that the project requires for the application to function
 
+## Database
+
+The SQLite database was used for the development environment, and the Postgres database for production as an add-on via Heroku. Both are relational databases and work well with the Django framework used for this project.
 
 ## Data Models
 The following models have been used to populate the database and for the site to function as it should:
@@ -320,7 +331,7 @@ As a user, I can quickly go to all products via the button
 
 As a user, I can see the copyrights of the page
 
-#Feature 4: The Products List
+# Feature 4: The Products List
 The products list is dynamic and will show the relevant products, depending on if the user has performed a search, clicked on a category or filtered the products in any other way.
 
 ![products1](readme/products1.png)
@@ -352,7 +363,7 @@ This page shows a dedicated page for the specific product. Here users can choose
 
 ![productdetail](readme/productdetail.png)
 
-Here users can decide the quantityto be added to their bag.
+Here users can decide the quantity to be added to their bag.
 
 Admin users can edit and remove the product through links here.
 
@@ -370,7 +381,7 @@ As a user, I can see the price, category, image and rating of the product
 ## Feature 6: The Bag
 The Bag is the users digital shopping bag, containing all products the user has added to it and their details.
 
-![bagcontents(readme/bagcontents.png)
+![bagcontents](readme/bagcontents.png)
 
 Its grand total and count is always partially visible in the navbar but has a dedicated page through which users can go through with the payment when they are done shopping.
 
@@ -390,9 +401,9 @@ A toast, a small dialog window at the top right, will be visible after adding an
 
 
 ## Feature 7: The Checkout Page
-The checkout page features a form for the user to fill in, with name, email, phone nr, delivery address and card details.
+The checkout page features a form for the user to fill in, with name, email, phone number, delivery address and card details.
 
-![checkout(#)
+![checkout](readme/checkoutform.png)
 
 From the checkout page, if user is authenticated, they can save their details to their their profile so they are prefilled for the next order. If they are not logged in, a link to log in is displayed in place of that option.
 
@@ -411,8 +422,9 @@ As a user, i can enter my card details on the checkout page, so that I can make 
 If the user has made a successful purchase, an order confirmation will be displayed to the user, and sent to the given email address during checkout. If the order was successful, the bag will be emptied
 
 In the confirmation, the user can view the items order, their quantity, an order number, grand total and delivery details.
+While the site is loading the information an overlay is shown to show the user that the site is loading
 
-![checkout(#)
+![loadingoverlay](readme/loadingoverlay.png)
 
 ## User stories covered:
 
@@ -421,7 +433,9 @@ As a user, I am informed of whether my purchase was successful or not via the Or
 ## Feature 9: The Sign Up/In/Out Pages
 Signing up, in and out are vital parts of this site, allowing users to save customer details to improve the users experience of the site. It also creates a possibility for the site owner to gain revisiting customers.
 
-![checkout(#)
+![signup](readme/signin.png)
+![login](readme/login.png)
+![logout](readme/logout.png)
 
 Users can easily sign up through the link in the navbar.
 
@@ -436,4 +450,529 @@ As a user, I can register for an account on the site, so that I can gain all the
 As a user, If I am not signed in, I am redirected to sign in/up if I click on any of the links or buttons restricted to logged in users
 
 As a user, I have to confirm my email address to complete my account registration
+
+## Feature 10: My StepUp
+Each user can access their own personal profile where they can enter their delivery information and keep track of their orders.
+
+![profile](#)
+
+Here, users can also change contact and delivery information
+
+
+### User stories covered:
+
+* As a logged in user, i can view a My profile page, so that I can view my previous orders, and view and update my delivery and contact details
+
+* As a logged in user, I can add my delivery details to the My profile page, so that it is my default delivery address for my order on the checkout page
+
+## Feature 11: The Admin Features
+
+There are extra features for admin users, so that site owners can add, edit and remove products on the site. This is visible in the navbar, where two more items are visible in the account menu; Product managment
+
+![productmanagment](readme/productmanagment.png)
+
+It is also visible in the products pagem Edit and Remove buttons on each product card in the list. On the product detail page, the Edit and Remove buttons are also visible.
+
+The Edit Product page consists of the same product form as on the previously page, only already filled out with the products current information. Here the admin user can update any current info for the product, as well as change the product image.
+
+* As a site owner, I can add, edit or remove any product on the site
+
+## Feature 12: The Django Admin
+The Django framework provides an excellent admin interface which this site has taken full advantage of. The admin panel of this site contains all instances of all database models, and the ability to edit, remove or add instances.
+
+![djangoadmin](readme/djangoadmin.png)
+
+### User stories covered:
+
+As a site owner, I can view an admin page, where I can perform batch editing of model instances on the site including products, categories and orders
+
+## Technologies Used
+
+### Languages
+
+* [Python](https://www.python.org/) - was used for backend programming
+
+* [html5](https://en.wikipedia.org/wiki/HTML5) - was used for building all web pages
+
+* [CSS3](https://en.wikipedia.org/wiki/CSS) - was utilized for styling the website
+
+* [JS](https://en.wikipedia.org/wiki/JavaScript) - for frontend programming
+
+### Frameworks, Libraries and Other Resources
+
+
+This project is built solely through the framework [django](https://www.djangoproject.com/), and I have tried to make use of its many powerful features.
+
+I have used [bootstrap4](https://getbootstrap.com/) as a framework for styling for efficiency purposes.
+
+The JavaScript framework [JQuery](https://jquery.com/) was used to minimize written code.
+
+[Font Awsome](https://fontawesome.com/) fonts were used for all icons in this project.
+
+[Google Fonts](https://fonts.google.com/) - Were used for all fonts in this project.
+
+[Facebook Pages](https://www.facebook.com/pages/create/?ref_type=site_footer) was used to create the Facebook Business Page that is linked on the site.
+
+[Git](https://git-scm.com/) - Version control system used to commit and push to Github via Gitpod.
+
+[GitHub](https://github.com/) - The projects repository and all its branches were commited, and pushed to Github.
+
+[Heroku](https://dashboard.heroku.com/) - Used to deploy the application.
+
+[AWS S3 Bucket](https://aws.amazon.com/s3/) - Used to host media (images) and static(CSS and JavaScript) files for the site.
+
+[Stripe](https://stripe.com/se) - Used to process the users payments and handle webhooks.
+
+[Gitpod](https://gitpod.com/) - All code was written and tested with the Gitpod web-based IDE.
+
+[LucidChart](https://lucid.co/product/lucidchart) was used to create the visual model schema of the project.
+
+## Testing
+
+Thorough testing of the site was performed
+
+## Manual testing
+
+### Overview
+
+I have tested the features against their user stories that cover them.
+
+### Testing of user story 1:
+
+As a user, the intention of the specific page is made clear to me, so that I know the purpose of that page
+
+This test is difficult to document, as it is covered by all the features and pages.
+
+* Conclusion: tests passed
+
+#### The Products Page
+
+* Intention: display the list of products according to the users query
+
+The user can filter results by search query, clicking on RGB, Cordless, All Products or sort the products by name, category, price or rating.
+
+* Conclusion: tests passed
+
+#### The Product Detail Page
+
+Intention: display the relevant information for the product in a tasteful manner and making it easy for the user to add the product to their bag
+
+The displayed information of the product is the SKU nr, name, category, description, details, price, giving me enough info to make my decision if the product falls to my liking.
+
+The quantity controls are easy to understand, and adding to the bag is done by clicking once on the button in question.
+
+* Conclusion: tests passed
+
+#### The Bag Page
+
+Intention: to show the user an overview of what the user intended to buy so the user can adjust the quantity, proceed to checkout or continue browsing
+
+The user has a clear overview of the bag wherever they are on the site, thanks to the floating grand total and product count at the top right or middle of screen on smaller screens.
+
+Going to the page, the user can clearly see the intention of the page. The count of items is at the top together with the page title. All items are visible as a table, including their image, name, SKU nr and price as well as fields where the user can adjust the quantity and remove the item from the bag. The grand total here is written in large fonts, and the buttons are large too.
+
+The quantity controls are easy to understand, and adding or removing to the bag is done by clicking once on the button.
+
+* Conclusion: tests passed
+
+#### The Checkout Page
+
+Intention: Allow users to enter the needed information for them to purchase the items in their bag
+
+The Checkout Page is clear and simple, and contains the fields:
+
+* Full Name
+* Email Address
+* Phone Number
+* Street Address 1
+* Street Address 2
+* Town or City
+* Postal Code
+* Country
+* Card Details
+
+As well as the Order summary, including the items added to the bag, their name, quantity and price. The Grand total is very visible at the bottom of the page.
+
+Under the card details field, the grand total amount is displayed once more in red.
+
+This to me is very clear, implying that after this step, the order is processed.
+
+* Conclusion: tests passed
+
+### The Sign Up/Sign In/Sign Out Pages
+
+Intention: Allow users to sign up, in or out
+
+The Signup/Login form is easy to understand and gives clear indications on whats needed.
+If the users inputs a invalid form the user will not be able to proccess the form and is prompted to try again with valid information
+
+* Conclusion: tests passed
+
+The Profile Page
+
+Intention: To give the user a way to personalize their experience on the site, as well as a reason to return
+
+As the Profile page includes info that the user themselves have chosen, Showing the order history and if saved information box was checked on checkout the information is here aswell, the user can edit delivery information if the user wants too
+
+* Conclusion: tests passed
+
+### The Product Managment Page
+
+Intention: Allow admin users to add a product to the site
+
+This page is also rather clear with one form on the page, the image file is displayed if a file is chosen and, with the click of a button at the bottom, the new product is visible just like all the other ones in the Products or Manage Brands pages.
+the admin can choose what category, name, description etc
+
+* Conclusion: tests passed
+
+#### The Edit Product Page
+
+Intention: Allow admin users to edit a product on the site
+
+The Edit Product page, just like the Product page, has a form in which the fields are clear to the user. The user can see the current product details, edit them and is prevented from entering false information, important details, like the description, details or name etc
+
+* Conclusion: tests passed
+
+## Testing of user story 2:
+
+As a user, I can access important links such as home, products, bag, sign in/out, and profile by scrolling and/or clicking once, regardless of where on the site I am, so that i can easily navigate the site
+
+The navbar is present throughout the site. I have chosen to include the navbar in the authentication pages (sign up/in/out) if the user should wish to access them.
+
+* Conclusion, User story 2 - : tests passed
+
+## Testing of user story 3 and 4:
+
+As a user, I can see a link in the footer to the site’s Facebook Business Page, so that I can follow the company on Facebook
+
+Like the navbar, the footer, includes the Facebook pages link, is almost always visible on each page. 
+
+* Conclusion, User story 3 and 4 - tests passed
+
+## Testing of user story 5:
+As a user, it is visible if I am signed in or not, so that I am made aware of this by clicking the profile icon
+
+the navbar is visible almost everywhere on the site - and in the navbar, the user can see their authentication status.
+
+On top of this, the user is reminded of this in the Product Detail and Checkout pages, with links to sign in to save order details.
+
+ * Conclusion, User story 5 - tests passed
+
+### Testing of user story 6:
+As a user, the choices I make on the site are confirmed to me, so that I am always aware of them
+
+A smart solution for giving users confirmation on when they have made a choice is the Toasts dialog function. Created with the help of Bootstrap and Django, the toast message is displayed to the user if the function they performed is successful. This includes everything from creating an account, signin in or out, adding or removing items from the bag, updating the bags item quantity, and making a successful order, in excess of the order confirmation page of course.
+
+The toast will also display items in the bag, if there are any.
+
+Also, if a user enters wrong or sufficient info, a message is given to the user if a choice cannot be made.
+
+* Conclusion, User story 6 - tests passed
+
+### Testing of user story 8:
+As a user, i can perform a search, so that products matching the search appear in the products list
+
+There is a search field in the navbar, in which users can search for products. performing a search on Rgb for example will display the products list filtering to show products with RGB in the product name or products in that category.
+
+* Conclusion, User story 8 - tests passed
+
+### Testing of user story 9:
+As a user, I can sort the products list by category, alphabetically or by rating, so that i can quickly find the product I seek
+
+The products page always displays a dropdown bar to sort products, by price (low to high), price (high to low),rating(high to low), rating(low to high), name (a-z), name (z-a), category (a-z) or category (z-a).
+
+* Conclusion, User story 9 - tests passed
+
+### Testing of user story 10:
+As a user, I can view the most important details of the product in the product list, such as model, category, price, rating, and image so that i know most details without having to click on the product
+
+The products are displayed as cards, each with:
+
+* Heading at the top
+* Product image
+* Price 
+* Rating
+* category
+* Edit and delete buttons if user is admin user
+
+* Conclusion, User story 10 - tests passed
+
+### Testing of user story 11:
+As a user, i can click the product in the products list so that I can view the products details
+
+Steps:
+
+* User is on Products page and clicks a single product
+* User is taken to the detail page of the product clicked on
+
+* Conclusion, User story 11 - tests passed
+
+Testing of user story 13:
+As a user, I can add a product to my bag by clicking ’Add to bag’ from the product detail page or from the products page that has a add to bag button that will add a quantity of 1, so that I can purchase the product
+
+* Conclusion, User story 13 - tests passed
+
+### Testing of user story 14:
+As a user, I can always see the total price of my bag in the navigation bar, so that I know what the total cost will be
+
+The bag total (and count) is visible as a floating badge/button at the top right corner. This is true on all pages where the navbar is displayed, which is virtually all pages
+
+* Conclusion, User story 14 - tests passed
+
+### Testing of user story 15 and 16:
+As a user, i can adjust the quantity of the product chosen after adding it to the bag
+
+As a user, I can view the products added to my bag by clicking the bag icon or by adding an item to the bag
+
+Passed testing of this user story is displayed in user story 13, where adding the item caused the toast to appear.
+
+#### Actions:
+
+* Clicking on the bag icon in the navbar
+* Being shown the bag page
+* Changing the quantity of the product and clicking Update
+* The cart items and quantity are displayed both in the toast message at the top and on the bag page
+
+* Conclusion, User story 15 and 16 - tests passed
+
+### Testing of user story 17:
+As a user, I can click the remove from bag button, so that I can easily remove products from my bag
+
+Actions
+
+* User clicks update quantity button 
+* Toast is displayed telling the user the item is remove and displaying the updated bag
+* The bag page is reloaded, updated with the changes made
+
+* Conclusion, User story 17 - tests passed
+
+### Testing of user story 18:
+As a user, I can click on Proceed to Checkout, so that I can purchase the items in my bag
+
+Actions
+
+* User clicks on the Checkout button at the bottom of the bag page
+* User is taken to the Checkout page
+
+* Conclusion, User story 18 - tests passed
+
+### Testing of user story 19:
+As a logged in user, on the Checkout page, I can choose to save my delivery address to profile, so that I can retain it for future orders
+
+Actions
+
+* Authenticated user clicks on the checkbox to save details to their profile
+* User proceeds with the order and it is processed
+* The details the user entered are now saved on the profile page
+
+* Conclusion, User story 19 - tests passed
+
+### Testing of user story 20:
+As a user, i can enter my card details on the checkout page, so that I can make the desired purchase
+
+Actions
+
+* User enters the card details (test card for stripe tested, details 4242 4242 4242 4242, cvc and postal code can be anything)
+* User proceeds with the order and it is processed
+* The order is completed
+
+* Conclusion, User story 20 - tests passed
+
+### Testing of user story 21:
+As a user, I am informed of whether my purchase was successful or not via the Order Successful page, as well as via an email sent upon order confirmation
+
+Actions
+
+* User has entered their card information and clicked on Complete Order and the processing screen appears
+* Either the order is completed and user is cofirmed of this, in which case an email is sent to the user.
+
+* Conclusion, User story 21 - tests passed
+
+### Testing of user story 22 and 24:
+As a user, I can register for an account on the site, so that I can gain all the site’s customer benefits
+
+As a user, I have to confirm my email address to complete my account registration
+
+Actions
+
+* User clicks on Sign Up in the nav or through any of the sign up links on the site
+* User is brought to the Sign Up page, where they are promted to enter their email and choose a username and password (password to be entered twice)
+* If the username and email address is unique for the site, the user is greeted with the email confirm page, letting the user know that an email has been sent to them with a confirmation link.
+* The user clicks the link and cofirms their email address
+
+* Conclusion, User story 22 and 24 - tests passed
+
+### Testing of user story 23:
+As a user, I am not able to access pages that require authentication if I am not signed in
+
+As links to these pages are not present if the user is not signed in, users cannot access these pages through any link on the page without signing in. If however a non authenticated user tries to enter any of the urls to the pages that are restricted to authenticated the user is brought to the signin page instead.
+
+Actions
+
+* User enters the url of a page restricted to authenticated users
+* User is brought to the sign in page instead
+
+* Conclusion, User story 23 - tests passed
+
+### Testing of user story 25 and 26:
+As a logged in user, i can view a Profile page, so that I can view my previous orders, and view and update my delivery and contact details
+
+As a logged in user, I can add my delivery details to the Profile page, so that it is my default delivery address for my order on the checkout page
+
+Actions
+
+* User needs to be registered and signed in.
+* User clicks on the Account nav menu item
+* User is brought to the Profile page where the user can update their details
+* The details are now visible on the Checkout page
+
+* Conclusion, User story 25 and 26 - tests passed
+
+### Testing of user story 27:
+As a site owner, I can view an admin page, where I can perform batch editing of model instances on the site including products, categories, orders
+
+The models available in the Django Admin panel are:
+
+* Product
+* Category
+* Order
+* Order Line Items (at the bottom of each order)
+
+Admin users can log in to the admin panel by signing in at https://gamesruz.herokuapp.com/admin/. Here they have read write and remove access to these instances.
+
+For example, an admin user can change the products in an order that has already been processed, which they cannot do on the regular site. They can also remove multiple items at once, which is also an operation limited to this admin panel.
+
+#### Performed tests
+
+* Updating a processed order, user details and order line items
+* Adding a category
+* Updating a product with the new category
+* Removing a image
+* Change image
+
+* Conclusion, User story 27 - tests passed
+
+### Testing of user story
+#### As a site owner, I can add, edit or remove any product on the site
+
+#### Performed tests
+
+* Adding a new product to the site
+
+* Admin user navigates to the Add Product menu item in the Account nav menu
+* User fills in the Add Product form
+* If the form is valid, user is taken to the new products Product Detail page
+
+#### Editing a product
+
+* Admin clicks the Edit button, either on the product cart in the Products page or at the top of the Product detail page
+* User is presented with the products current details in the product form and can edit it
+* User clicks on Update Product
+* If the form is valid, user is taken to the newly edited products Product Detail page
+
+#### Removing a product
+
+* Admin clicks the Delete button, either on the product bag in the Products page or at the top of the Product detail page
+* User clicks Delete Product and is notified via a toast that the product is removed
+
+Conclusion, User story 28 - tests passed
+
+## Other Services
+
+### Stripe
+Stripe was used as a payment service, allowing users to pay for products. The process:
+
+* Create an account at https://stripe.com/
+* Go to the developers pane and navigate to API keys
+* Copy the publishable and secret keys and put them in your config vars in your development envirenment (and in Heroku config vars in production)
+
+Webhooks were created too to make sure payments did not fail due to web errors. This can be done by doing the following:
+
+* Navigate to Webhooks on the page, and create an endpoint with the url you send your webhooks to, in this case, the url is https://gamesruz.herokuapp.com/checkout/wh/
+* Add events to listen for, for example payment_intent_succeeded and payment_intent.payment_failed as in this case, in delvelopment and for all events in the live site
+* The webhooks should be sent when processing orders in all cases
+
+
+## Deployment
+
+#### Forking the GitHub Repository
+To make a clone, or 'Fork' this repository, follow the steps below.
+
+* Access your GitHub account and find the relevant repository.
+* Click on 'Fork' on the top right of the page.
+* You will find a copy of the repository in your own Github account
+
+#### Making a Local Clone
+* Access your GitHub account and find the relevant repository.
+* Click the 'Code' button next to 'Add file'.
+* To clone the repository using HTTPS, under clone with HTTPS, copy the link.
+* Open Git Bash.
+* Access the directory you want the clone to be have.
+* In your IDE's terminal type 'git clone' and the paste the URL you copied.
+* Press Enter.
+* You now have a local clone.
+
+### Heroku
+This application has been deployed from Github using Heroku. Here's how:
+
+* Create an account at heroku.com
+* Create a new app, add app name and your region
+* Click on create app
+* Go to "Settings"
+* Under Config Vars, add your sensitive data (creds.json for example)
+* Go to "Deploy" and at "Deployment method", click on "Connect to Github"
+* Enter your repository name and click on it when it shows below
+* Choose the branch you want to buid your app from
+* If desired, click on "Enable Automatic Deploys", which keeps the app up to date with your Github repository
+
+### AWS S3
+The deployed version of this website has static(CSS and JavaScript) and media files hosted to it via a web based service called Amazon Web Services S3 Bucket.
+
+The steps to take are:
+
+* Create an account at aws.amazon.com
+* Navigate to the IAM application and create a user and group
+* Set the AmazonS3FullAccess for the user and copy the AWS ACCESS and SECRET keys as config vars to your workspace and deployment environment
+* Create a new Bucket within the S3 application with an appropriate name.
+* Enable public access for your bucket so users can access and use the services on your website (upload, view, download, etc). More info can be read in the official documentation: https://aws.amazon.com/s3/
+
+### Performance
+Performance was tested using Google Chrome's Lighthouse tool in DevTools built into the browser. 
+
+#### Home
+#### Mobile
+![Home](readme/lighthome.png)
+#### Desktop
+![Home](readme/desktophome.png)
+
+### Products
+#### Mobile
+![Products](readme/lightproducts.png)
+#### Desktop
+![Products](readme/desktopproducts.png)
+
+### Product Detail
+#### Mobile
+![product Detail](readme/lightdetails.png)
+#### Desktop
+![product Detail](readme/desktopdetails.png)
+
+### Bag
+#### Mobile
+![bag](readme/lightbag.png)
+#### Desktop
+![bag](readme/desktopbag.png)
+
+### Checkout
+#### Mobile
+![checkout](readme/lightcheckout.png)
+#### Desktop
+![checkout](readme/desktopcheckout.png)
+
+### Order History
+#### Mobile
+![orderhistory](readme/lighthistory.png)
+#### Desktop
+![orderhistory](readme/desktophistory.png)
+
 
