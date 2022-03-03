@@ -451,12 +451,12 @@ As a user, If I am not signed in, I am redirected to sign in/up if I click on an
 
 As a user, I have to confirm my email address to complete my account registration
 
-## Feature 10: My StepUp
+## Feature 10: Profile
 Each user can access their own personal profile where they can enter their delivery information and keep track of their orders.
 
-![profile](#)
+![profile](readme/profile.png)
 
-Here, users can also change contact and delivery information
+Here, users can also change contact and delivery information and view their previous orders
 
 
 ### User stories covered:
