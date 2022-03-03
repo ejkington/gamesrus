@@ -12,15 +12,15 @@ from products.models import Product
 
 
 def view_bag(request):
-    """ 
-    view for showing the bag contents page 
+    """
+    view for showing the bag contents page
     """
     return render(request, 'bag/bag.html')
 
 
 def add_to_bag(request, item_id):
-    """ 
-    Add items to bag 
+    """
+    Add items to bag
     """
 
     product = get_object_or_404(Product, pk=item_id)

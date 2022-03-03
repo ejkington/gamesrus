@@ -145,7 +145,7 @@ def checkout(request):
 
 
 def checkout_success(request, order_number):
-    """ 
+    """
     Handles success checkouts
     """
     save_info = request.session.get('save_info')
