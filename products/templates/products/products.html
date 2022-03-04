@@ -14,7 +14,9 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-5">
-            <h2 class="logo-font mt-5">Our Products</h2>
+            <h2 class="logo-font mt-5">
+                Our Products
+            </h2>
             <hr class="w-50 mb-1">
         </div>
     </div>
@@ -51,7 +53,9 @@
                 <div class="col-12 col-md-6 order-md-first">
                     <p class="text-muted mt-3 text-center text-md-left">
                         {% if search_term or current_categories or current_sorting != 'None_None' %}
-                        <span class="small"><a href="{% url 'products' %}">Back to products</a> | </span>
+                        <span class="small"><a href="{% url 'products' %}">
+                                Back to products
+                            </a> | </span>
                         {% endif %}
                         {{ products|length }} Products{% if search_term %} found for
                         <strong>"{{ search_term }}"</strong>{% endif %}
@@ -77,33 +81,46 @@
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0 ">
-                                    <p class="mb-0">{{ product.name }}</p>
+                                    <p class="mb-0">
+                                        {{ product.name }}
+                                    </p>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
 
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                            <p class="lead mb-0 text-left font-weight-bold">
+                                                ${{ product.price }}
+                                            </p>
                                             {% if product.category %}
                                             <p class="small mt-1 mb-0">
                                                 <a href="{% url 'products' %}$?category={{ product.category.name }}"
                                                     class="text-muted">
-                                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                                    <i class="fas fa-tag mr-1">
+                                                    </i>
+                                                    {{ product.category.friendly_name }}
                                                 </a>
                                             </p>
                                             {% endif %}
                                             {% if product.rating %}
-                                            <small class="text-muted"><i
-                                                    class="fas fa-star mr-1"></i>{{ product.rating }} /
-                                                5</small>
+                                            <small class="text-muted">
+                                                <i class="fas fa-star mr-1">
+                                                </i>
+                                                {{ product.rating }} / 5
+                                            </small>
                                             {% else %}
-                                            <small class="text-muted">No Rating yet</small>
+                                            <small class="text-muted">
+                                                No Rating yet
+                                            </small>
                                             {% endif %}
                                             {% if request.user.is_superuser %}
                                             <small class="ml-3">
-                                                <a href="{% url 'edit_product' product.id %}">Edit</a>
-                                                <a href="{% url 'delete_product' product.id %}"
-                                                    class="text-danger">Delete</a>
+                                                <a href="{% url 'edit_product' product.id %}">
+                                                    Edit
+                                                </a>
+                                                <a href="{% url 'delete_product' product.id %}" class="text-danger">
+                                                    Delete
+                                                </a>
                                             </small>
                                             {% endif %}
                                         </div>
