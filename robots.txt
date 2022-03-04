@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /user_account/
+Disallow: /bag/
+Disallow: /checkout/
+Disallow: /checkout/checkout_success/
+Disallow: /profile/
+Disallow: /products/add/
+Sitemap: https://gamesruz.herokuapp.com//sitemap.xml
