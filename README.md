@@ -67,7 +67,7 @@ The site owners primary goals are:
 
 * To be able to edit their account details or remove their account
 
-* To easily navigate the whole website and keep track of all user interactions, for example the products in their cart and how much they are to spend
+* To easily navigate the whole website and keep track of all user interactions, for example the products in their bag and how much they are to spend
 
 # Business Model
 I have chosen a traditional B2C (Business to Customer without middle person) application, which has a straightforward and user friendly interface. This online store offers no products of their own and relies on the wholesale of branded products. A real world version of the store would list all the retailers it is affiliated with.
@@ -146,7 +146,7 @@ These pages are provided by the Allauth package of the Django framework, but are
 * Various pages for email verification and password reset, etc
 
 ## Technical Design
-###Code Structure
+### Code Structure
 I have devided the code into apps as per Django best practice, for the different areas of functionality.
 
 * Home - basic functionality for the home page
@@ -233,7 +233,7 @@ As a user, I can access important links such as home, products, my bag, sign in/
 
 * As a user, I can always see the total price of my bag in the navigation bar, so that I know what the total cost will be
 
-* As a user, i can adjust the quantity of the product chosen after adding it to the shopping cart in the order details
+* As a user, i can adjust the quantity of the product chosen after adding it to the shopping bag in the order details
 
 * As a user, I can view the products added to my bag by clicking the bag icon or by adding an item to the bag
 
@@ -299,7 +299,7 @@ As a user, I can access important links such as home, products, my bag, sign in/
 
 * As a user, I can always see the total price of my bag in the navigation bar, so that I know what the total cost will be
 
-* As a user, I can view the products added to my bag by clicking the cart icon or by adding an item to the cart
+* As a user, I can view the products added to my bag by clicking the bag icon or by adding an item to the bag
 
 * As a user, I am not able to access pages that require authentication if I am not signed in
 
@@ -451,12 +451,12 @@ As a user, If I am not signed in, I am redirected to sign in/up if I click on an
 
 As a user, I have to confirm my email address to complete my account registration
 
-## Feature 10: My StepUp
+## Feature 10: Profile
 Each user can access their own personal profile where they can enter their delivery information and keep track of their orders.
 
-![profile](#)
+![profile](readme/profile.png)
 
-Here, users can also change contact and delivery information
+Here, users can also change contact and delivery information and view their previous orders
 
 
 ### User stories covered:
@@ -731,7 +731,7 @@ Passed testing of this user story is displayed in user story 13, where adding th
 * Clicking on the bag icon in the navbar
 * Being shown the bag page
 * Changing the quantity of the product and clicking Update
-* The cart items and quantity are displayed both in the toast message at the top and on the bag page
+* The bag items and quantity are displayed both in the toast message at the top and on the bag page
 
 * Conclusion, User story 15 and 16 - tests passed
 
@@ -865,7 +865,7 @@ For example, an admin user can change the products in an order that has already 
 
 #### Editing a product
 
-* Admin clicks the Edit button, either on the product cart in the Products page or at the top of the Product detail page
+* Admin clicks the Edit button, either on the product bag in the Products page or at the top of the Product detail page
 * User is presented with the products current details in the product form and can edit it
 * User clicks on Update Product
 * If the form is valid, user is taken to the newly edited products Product Detail page
@@ -974,5 +974,152 @@ Performance was tested using Google Chrome's Lighthouse tool in DevTools built i
 ![orderhistory](readme/lighthistory.png)
 #### Desktop
 ![orderhistory](readme/desktophistory.png)
+
+
+## Validation
+
+Thourough validation of all code was made without errors. The results can be viewed
+
+The languages tested are:
+
+Python (validation performed with PEP8)
+JavaScript (validation performed with JSHint)
+HTML (validation performed with W3 HTML Validator)
+CSS (validation performed with W3 Jigsaw CSS Validator)
+
+The Python code was validated with the PEP8 Online tool. All files tested with 0 errors. See the results below.
+
+## Home App
+home/apps.py
+![apps](readme/Python_validate/python/validatorhomeview.png)
+
+home/urls.py
+![urls](readme/Pythonvalidate/python/validateurl.png)
+
+![profile](readme/profile.png)
+home/views.py
+![views](readme/Python validate/python/validatorhomeview.png)
+
+## Products app
+
+product/views.py
+![views](readme/python/product/views.png)
+
+product/urls.py
+![views](readme/python/product/urls.png)
+
+product/models.py
+![views](readme/python/product/models.png)
+
+product/admin.py
+![views](readme/python/product/admin.png)
+
+product/forms.py
+![views](readme/python/product/forms.png)
+
+## Bag app
+
+product/views.py
+![views](readme/python/bag/views.png)
+
+product/context.py
+![views](readme/python/bag/context.png)
+
+product/urls.py
+![views](readme/python/bag/urls.png)
+
+## Checkout app
+
+checkout/admin.py
+![admin](readme/python/checkout/admin.png)
+
+checkout/forms.py
+![forms](readme/python/checkout/forms.png)
+
+checkout/models.py
+![models](readme/python/checkout/models.png)
+
+checkout/signals.py
+![signals](readme/python/checkout/signals.png)
+
+checkout/views.py
+![views](readme/python/checkout/views.png)
+
+checkout/webhook_handler.py
+![webhook_handler](readme/python/checkout/webhook_handler.png)
+
+checkout/webhooks.py
+![webhooks](readme/python/checkout/webhooks.png)
+
+## Profiles app
+
+profiles/forms.py
+![forms](readme/python/profile/forms.png)
+
+profiles/models.py
+![models](readme/python/profile/models.png)
+
+profiles/views.py
+![views](readme/python/profile/views.png)
+
+## JSHint JavaScript Validation
+
+country_field.js
+![country](readme/Jsvalidate/country_field.png)
+
+result_sorting.js
+![result](readme/Jsvalidate/result_sorting.png)
+
+stripe_elements.js
+![elements](readme/Jsvalidate/stripe_elements.png)
+
+## W3C Jigsaw Validation
+
+base.css
+![base](readme/css/base.png)
+
+checkout.css
+![checkout](readme/css/checkout.png)
+
+profile.css
+![profile](readme/css/profile.png)
+
+
+## W3C HTML Validation
+
+he HTML code was validated with the W3C Validator. As the HTML files are never a single HTML file in this case, using Django and a base.html file as a base for all pages, I am referring to the pages as their name instead of the actual file name.
+
+
+
+
+## Bugs
+
+Oh the bugs. i cant count the number of bugs caused by misspelling or bad intendation, missed underscore or hyfen, missed space on a django template tag
+the good part is that iv gotten really good at reading error messages provided, 
+
+* overlay when payment is loading dident work as intended (Fixed by changing jquery from slim)
+
+
+# Credits
+
+Code Much of the coding and testing relies heavily on information in the "Botique Ado" walkthrough in the Code Institue Full Stack Frameworks module.
+
+
+Copyrights
+Media
+Images of the products is from spel och sånt https://spelochsant.se 
+with their consent.
+
+Index image is from unsplash 
+
+Content
+All products price, description, images is from https://spelochsant.se
+
+## Acknowledgments
+I want to thank my mentor Brian Macharia pointing me in the right directions. Also John_veniah project stepUp shoes has given me tips on some of the elements on this site
+My friends and family that suports me the best they can
+My girlfriend who iv seen far less then usual
+
+and all the tutors working at codeinstitute
 
 
