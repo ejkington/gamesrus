@@ -82,7 +82,7 @@ The intentions should be obvious and users should know as soon as they enter the
 
 ### Marketing
 This site has a Facebook Business page with a link on the page footer. It can be viewed
-# (LINK TO FACEBOOK SITE)
+* (https://www.facebook.com/Games-R-Us-102790679025685)
 
 
 ### Search Engine Optimisation
@@ -425,6 +425,7 @@ In the confirmation, the user can view the items order, their quantity, an order
 While the site is loading the information an overlay is shown to show the user that the site is loading
 
 ![loadingoverlay](readme/loadingoverlay.png)
+![success](readme/checkoutsuccess.png)
 
 ## User stories covered:
 
