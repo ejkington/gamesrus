@@ -990,17 +990,6 @@ CSS (validation performed with W3 Jigsaw CSS Validator)
 
 The Python code was validated with the PEP8 Online tool. All files tested with 0 errors. See the results below.
 
-## Home App
-home/apps.py
-![apps](readme/Python_validate/python/validatorhomeview.png)
-
-home/urls.py
-![urls](readme/Pythonvalidate/python/validateurl.png)
-
-![profile](readme/profile.png)
-home/views.py
-![views](readme/Python validate/python/validatorhomeview.png)
-
 ## Products app
 
 product/views.py
@@ -1090,8 +1079,22 @@ profile.css
 
 he HTML code was validated with the W3C Validator. As the HTML files are never a single HTML file in this case, using Django and a base.html file as a base for all pages, I am referring to the pages as their name instead of the actual file name.
 
+bag.html
+![bag](readme/html validate/bag.png)
 
+checkout.html
+![checkout](readme/html validate/checkout.png)
 
+index.html
+![index](readme/html validate/home.png)
+
+products.html
+![products](readme/html validate/products.png)
+
+product_detail.html
+![detail](readme/html validate/products_1.png)
+
+Iv opted not to fix the errors displayed as iv struggeled with sick kids at home and havent had the time before submiting
 
 ## Bugs
 
@@ -1110,14 +1113,16 @@ Copyrights
 Media
 Images of the products is from spel och sånt https://spelochsant.se 
 with their consent.
+images not on spelochsants page is from the manufacturers site.
 
-Index image is from unsplash 
+Index/home image is from unsplash 
 
 Content
 All products price, description, images is from https://spelochsant.se
+or from the manufacturers site.
 
 ## Acknowledgments
-I want to thank my mentor Brian Macharia pointing me in the right directions. Also John_veniah project stepUp shoes has given me tips on some of the elements on this site
+I want to thank my mentor Brian Macharia pointing me in the right directions. Also John_veniah project stepUp shoes project.
 My friends and family that suports me the best they can
 My girlfriend who iv seen far less then usual
 
