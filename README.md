@@ -1116,6 +1116,7 @@ or from the manufacturers site.
 I want to thank my mentor Brian Macharia pointing me in the right directions. Also John_veniah project stepUp shoes project.
 My friends and family that suports me the best they can
 My girlfriend who iv seen far less then usual
+kevin powell for insperation on the gear shop button on landing page
 
 and all the tutors working at codeinstitute
 
