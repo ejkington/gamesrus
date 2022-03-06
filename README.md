@@ -1071,19 +1071,19 @@ profile.css
 he HTML code was validated with the W3C Validator. As the HTML files are never a single HTML file in this case, using Django and a base.html file as a base for all pages, I am referring to the pages as their name instead of the actual file name.
 
 bag.html
-![bag](readme/html validate/bag.png)
+![bag](readme/html_validate/bag.png)
 
 checkout.html
-![checkout](readme/html validate/checkout.png)
+![checkout](readme/html_validate/checkout.png)
 
 index.html
 ![index](readme/html validate/home.png)
 
 products.html
-![products](readme/html validate/products.png)
+![products](readme/html_validate/products.png)
 
 product_detail.html
-![detail](readme/html validate/products_1.png)
+![detail](readme/html_validate/products_1.png)
 
 Iv opted not to fix the errors displayed as iv struggeled with sick kids at home and havent had the time before submiting
 
