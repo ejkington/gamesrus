@@ -118,9 +118,7 @@ This website has 11 custom built pages and 16 (not all are used) account operati
 
 #### Sign Out
 
-* Other accounts operations pages such as Change Password or Password reset
-
-* Delete Account - Allows the user to completely remove their account from Games R us
+* user can signout
 
 ### Accessible to Admin users
 
@@ -140,8 +138,6 @@ These pages are provided by the Allauth package of the Django framework, but are
 * Sign in - Registered users can log accessing their personal info etc by signing in
 
 * Sign Out - The same goes for signing out
-
-* Various pages for email verification and password reset, etc
 
 ## Technical Design
 ### Code Structure
