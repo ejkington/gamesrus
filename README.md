@@ -1,8 +1,6 @@
 # Games R us
 
 
-# IM I RESPONSIVE ()
-
 ### Games R us is an ecommerce web application for customers seeking to purchase pc gaming accessories online.
 
 This is the fifth and last portfolio project for the Code Institute Diploma in Fullstack Software Development.
@@ -159,10 +157,7 @@ I have devided the code into apps as per Django best practice, for the different
 
 * Profiles - functionality regarding the users profile and order data
 
-* User Account - The app in which users can delete their account
-
 ### Other Directories and files
-
 
 * static - css and javascript files
 
