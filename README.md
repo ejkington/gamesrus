@@ -194,7 +194,7 @@ The following models have been used to populate the database and for the site to
 
 * UserProfile - the model storing the users product and order information
 
-# Img of database schema for models (#)
+![dbdiagram](readme/dbdiagram.png)
 
 ## Scope - Epics and User Stories
 Epic 1: Base functionality and ease of use
