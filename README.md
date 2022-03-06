@@ -1077,7 +1077,7 @@ checkout.html
 ![checkout](readme/html_validate/checkout.png)
 
 index.html
-![index](readme/html validate/home.png)
+![index](readme/html_validate/home.png)
 
 products.html
 ![products](readme/html_validate/products.png)
