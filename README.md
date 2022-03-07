@@ -1,8 +1,6 @@
 # Games R us
 
 
-# IM I RESPONSIVE ()
-
 ### Games R us is an ecommerce web application for customers seeking to purchase pc gaming accessories online.
 
 This is the fifth and last portfolio project for the Code Institute Diploma in Fullstack Software Development.
@@ -120,9 +118,7 @@ This website has 11 custom built pages and 16 (not all are used) account operati
 
 #### Sign Out
 
-* Other accounts operations pages such as Change Password or Password reset
-
-* Delete Account - Allows the user to completely remove their account from Games R us
+* user can signout
 
 ### Accessible to Admin users
 
@@ -143,8 +139,6 @@ These pages are provided by the Allauth package of the Django framework, but are
 
 * Sign Out - The same goes for signing out
 
-* Various pages for email verification and password reset, etc
-
 ## Technical Design
 ### Code Structure
 I have devided the code into apps as per Django best practice, for the different areas of functionality.
@@ -159,10 +153,7 @@ I have devided the code into apps as per Django best practice, for the different
 
 * Profiles - functionality regarding the users profile and order data
 
-* User Account - The app in which users can delete their account
-
 ### Other Directories and files
-
 
 * static - css and javascript files
 
@@ -203,7 +194,7 @@ The following models have been used to populate the database and for the site to
 
 * UserProfile - the model storing the users product and order information
 
-# Img of database schema for models (#)
+![dbdiagram](readme/dbdiagram.png)
 
 ## Scope - Epics and User Stories
 Epic 1: Base functionality and ease of use
@@ -990,17 +981,6 @@ CSS (validation performed with W3 Jigsaw CSS Validator)
 
 The Python code was validated with the PEP8 Online tool. All files tested with 0 errors. See the results below.
 
-## Home App
-home/apps.py
-![apps](readme/Python_validate/python/validatorhomeview.png)
-
-home/urls.py
-![urls](readme/Pythonvalidate/python/validateurl.png)
-
-![profile](readme/profile.png)
-home/views.py
-![views](readme/Python validate/python/validatorhomeview.png)
-
 ## Products app
 
 product/views.py
@@ -1090,8 +1070,22 @@ profile.css
 
 he HTML code was validated with the W3C Validator. As the HTML files are never a single HTML file in this case, using Django and a base.html file as a base for all pages, I am referring to the pages as their name instead of the actual file name.
 
+bag.html
+![bag](readme/html_validate/bag.png)
 
+checkout.html
+![checkout](readme/html_validate/checkout.png)
 
+index.html
+![index](readme/html_validate/home.png)
+
+products.html
+![products](readme/html_validate/products.png)
+
+product_detail.html
+![detail](readme/html_validate/products_1.png)
+
+Iv opted not to fix the errors displayed as iv struggeled with sick kids at home and havent had the time before submiting
 
 ## Bugs
 
@@ -1110,16 +1104,19 @@ Copyrights
 Media
 Images of the products is from spel och sånt https://spelochsant.se 
 with their consent.
+images not on spelochsants page is from the manufacturers site.
 
-Index image is from unsplash 
+Index/home image is from unsplash 
 
 Content
 All products price, description, images is from https://spelochsant.se
+or from the manufacturers site.
 
 ## Acknowledgments
-I want to thank my mentor Brian Macharia pointing me in the right directions. Also John_veniah project stepUp shoes has given me tips on some of the elements on this site
+I want to thank my mentor Brian Macharia pointing me in the right directions. Also John_veniah project stepUp shoes project.
 My friends and family that suports me the best they can
 My girlfriend who iv seen far less then usual
+kevin powell for insperation on the gear shop button on landing page
 
 and all the tutors working at codeinstitute
 
