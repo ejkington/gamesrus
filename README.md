@@ -1085,8 +1085,6 @@ products.html
 product_detail.html
 ![detail](readme/html_validate/products_detail.png)
 
-Iv opted not to fix the errors displayed as iv struggeled with sick kids at home and havent had the time before submiting
-
 ## Bugs
 
 Oh the bugs. i cant count the number of bugs caused by misspelling or bad intendation, missed underscore or hyfen, missed space on a django template tag
