@@ -155,13 +155,14 @@
             <i class=" fas fa-arrow-up text-black ms-auto my-auto arrow-margin"></i>
         </a>
     </div>
-    {% endblock %}
+</div>
+{% endblock %}
 
 
 
-    {% block postloadjs %}
-    {{ block.super }}
-    <!-- JavaScript to sort results -->
-    <script src="{% static 'js/result_sorting.js' %}"></script>
-    <script src="{% static 'js/delete_item.js' %}"></script>
-    {% endblock %}
+{% block postloadjs %}
+{{ block.super }}
+<!-- JavaScript to sort results -->
+<script src="{% static 'js/result_sorting.js' %}"></script>
+<script src="{% static 'js/delete_item.js' %}"></script>
+{% endblock %}
