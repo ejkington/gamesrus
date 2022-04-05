@@ -54,7 +54,7 @@ class ProductReview(models.Model):
     """
     product = models.ForeignKey(
         Product, related_name='reviews', on_delete=models.CASCADE)
-    user = models.OneToOneField(
+    user = models.ForeignKey(
         User, related_name='user_review', on_delete=models.CASCADE)
     content = models.TextField(blank=True, null=True)
     stars = models.IntegerField()
