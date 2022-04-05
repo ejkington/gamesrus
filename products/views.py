@@ -93,7 +93,7 @@ def add_product(request):
             return redirect(reverse('products'))
         else:
             messages.error(
-                request, 'Failed to add product, check your form and try again!')
+                request, 'Failed, check your form and try again!')
     else:
         form = ProductForm()
 
