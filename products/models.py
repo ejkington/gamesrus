@@ -42,7 +42,7 @@ class Product(models.Model):
     def get_rating(self):
         total = sum(int(review['stars']) for review in self.reviews.values())
         
-        if self.review.count() > 0:
+        if self.reviews.count() > 0:
             return total / self.reviews.count()
         else:
             return 0

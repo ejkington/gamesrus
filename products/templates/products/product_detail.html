@@ -41,7 +41,8 @@
                 <p class="lead mb-0 text-left font-weight-bold">
                     ${{ product.price }},<br>
                     User <i class="fas fa-star mr-1">
-                    </i> {{ product.get_rating}}
+                    </i> {% if product.get_rating == 0 %}No User Ratings
+                    Yet{% else %}{{ product.get_rating|floatformat:1}}{% endif %}
                 </p>
                 {% if product.category %}
                 <p class="small mt-1 mb-0">
@@ -131,7 +132,7 @@
     <div class="notification">
         <p>
             <b>Review by:</b> {{ review.user }}<br>
-            <b>Date: </b> {{ review.date.added | date:"Y-m-d"}},<br>
+            <b>Date: </b> {{ review.date.added|date:"Y-m-d"}},<br>
             <b>Stars:</b> {{ review.stars }}
         </p>
         {{ review.content }}
