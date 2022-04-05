@@ -11,7 +11,7 @@
 </div>
 {% endblock %}
 {% block extra_title %}
-| {{ product.name }} 
+| {{ product.name }}
 {% endblock %}
 
 {% block content %}
@@ -39,7 +39,9 @@
             <div class="product-details-container mb-5 mt-md-5">
                 <p class="mb-0">{{ product.name }}</p>
                 <p class="lead mb-0 text-left font-weight-bold">
-                    ${{ product.price }}
+                    ${{ product.price }},<br>
+                    User <i class="fas fa-star mr-1">
+                    </i> {{ product.get_rating}}
                 </p>
                 {% if product.category %}
                 <p class="small mt-1 mb-0">
@@ -119,6 +121,65 @@
             </div>
         </div>
     </div>
+</div>
+<hr>
+
+<h3 class="subtitle">User Reviews</h3>
+
+<div class="reviews-wrapper">
+    {% for review in product.reviews.all %}
+    <div class="notification">
+        <p>
+            <b>Review by:</b> {{ review.user }}<br>
+            <b>Date: </b> {{ review.date.added | date:"Y-m-d"}},<br>
+            <b>Stars:</b> {{ review.stars }}
+        </p>
+        {{ review.content }}
+    </div>
+    <hr>
+
+    {% empty %}
+    <div class="notification mb-3">
+        This product hasent recived any reviews, Be the first to review this product!
+    </div>
+    {% endfor %}
+</div>
+
+<div class="notification mb-3">
+    {% if request.user.is_authenticated %}
+    <form action="." method="post">
+        {% csrf_token %}
+        <div class="field">
+            <label>Stars</label>
+
+            <div class="control">
+                <div class="select">
+                    <select name="stars" id="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3" selected>3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label>Content</label>
+            <div class="control">
+                <textarea class="textarea" name="content"></textarea>
+            </div>
+        </div>
+        <div class="field">
+            <div class="control">
+                <button class="btn btn-black">Submit</button>
+            </div>
+        </div>
+    </form>
+    {% else %}
+    <hr>
+    <h3>Sign in to make a review</h3>
+    {% endif %}
 </div>
 {% endblock %}
 

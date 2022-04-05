@@ -35,9 +35,17 @@ class Product(models.Model):
         max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
-
+    
     def __str__(self):
         return self.name
+    
+    def get_rating(self):
+        total = sum(int(review['stars']) for review in self.reviews.values())
+        
+        if self.review.count() > 0:
+            return total / self.reviews.count()
+        else:
+            return 0
 
 
 class ProductReview(models.Model):
