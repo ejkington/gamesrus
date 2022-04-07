@@ -321,6 +321,25 @@ a {
     display: none;
 }
 
+textarea {
+    resize: none;
+    box-shadow: 0 0 15px #000;
+    border: 2px solid hsl(317 100% 54%);
+}
+
+.reviews-wrapper {
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 50px;
+    text-decoration: underline;
+}
+
+.notification {
+    text-align: center;
+}
 
 /* -------------------------------- Media Queries */
 
