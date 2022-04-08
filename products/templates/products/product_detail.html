@@ -135,14 +135,19 @@
             <b>Date: </b> {{ review.date_added }}<br>
             <b>Stars:</b> {{ review.stars }}
         </p>
-        {{ review.content }}
+        {{ review.content }}<br>
+        {% if request.user.is_authenticated %}
+        <form action="{% url 'delete_review' review.id %}" method="post">
+            {% csrf_token %}
+            <button class="btn btn-sm btn-black">Delete Review</button>
+        </form>
     </div>
     <hr>
 
-    {% empty %}
     <div class="notification mb-3">
         This product hasent recived any reviews, Be the first to review this product!
     </div>
+    {% endif %}
     {% endfor %}
 </div>
 
@@ -167,7 +172,7 @@
         </div>
 
         <div class="field">
-            <label>Content</label>
+            <label>Make a review</label>
             <div class="control">
                 <textarea class="textarea" cols="100" rows="10" name="content"></textarea>
             </div>

@@ -84,6 +84,18 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
+def delete_review(request, review_id):
+    """
+    Delete a product review 
+    """
+    if request.method == 'POST' and request.user.is_authenticated:
+        review = ProductReview.objects.delete(review_id=review_id, user=request.user, stars=stars, content=content)
+        review.delete()
+
+    messages.success(request, 'Your review has ben deleted!')
+    return redirect(reverse('products'))
+
+
 @login_required
 def add_product(request):
     """
