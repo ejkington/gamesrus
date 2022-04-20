@@ -330,6 +330,8 @@ textarea {
 
 .reviews-wrapper {
     text-align: center;
+    box-shadow: 0 0 15px #000;
+    border: 2px solid hsl(317 100% 54%);
 }
 
 .subtitle {
