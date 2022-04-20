@@ -196,6 +196,33 @@ The following models have been used to populate the database and for the site to
 
 ![dbdiagram](readme/dbdiagram.png)
 
+## Wireframes / mockups
+### Landing Page
+![Landingpage](https://share.balsamiq.com/c/siyTzfeHmukWFWvwAuHGC9.png)
+### Landing Page mobile
+![Landingpage](#)
+### Products page
+![Products](https://share.balsamiq.com/c/sXhEHVKxpVRyowRDpmfhRX.png)
+### Products page mobile
+![Products](#)
+### Product detail page
+![Productdetail](https://share.balsamiq.com/c/tCwcjBXfVN5J2qG9LAvWJ4.png)
+### Product detail page mobile
+![Productdetail](#)
+### login/logout page
+![login](https://share.balsamiq.com/c/2KK2Qr91BdUwRYsZaX7dsm.png)
+### login/logout page mobile
+![login](#)
+### bag page
+![bag](https://share.balsamiq.com/c/gBRZBLWYubq87o67P7chKb.png)
+### bag page mobile
+![bag](#)
+### checkout page
+![checkout](https://share.balsamiq.com/c/fuz4eHEEYmKrKcVqQfaRwP.png)
+### checkout page mobile
+![checkout](#)
+
+
 ## Scope - Epics and User Stories
 Epic 1: Base functionality and ease of use
 As a user, the intention of the specific page is made clear to me, so that I know the purpose of that page
