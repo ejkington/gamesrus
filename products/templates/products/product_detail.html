@@ -136,6 +136,7 @@
             <b>Stars:</b> {{ review.stars }}
         </p>
         {{ review.content }}<br>
+        <hr>
         {% if request.user.is_authenticated %}
         <form action="{% url 'delete_review' review.id %}" method="post">
             {% csrf_token %}

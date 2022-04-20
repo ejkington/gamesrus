@@ -89,7 +89,7 @@ def delete_review(request, review_id):
     Delete a product review 
     """
     if request.method == 'POST' and request.user.is_authenticated:
-        review = ProductReview.objects.delete(review_id=review_id, user=request.user, stars=stars, content=content)
+        review = get_object_or_404(ProductReview, id=review_id)
         review.delete()
 
     messages.success(request, 'Your review has ben deleted!')
