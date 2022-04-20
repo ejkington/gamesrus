@@ -325,7 +325,7 @@ textarea {
     resize: none;
     box-shadow: 0 0 15px #000;
     border: 2px solid hsl(317 100% 54%);
-    max-width: 90%;
+    max-width: 100%;
 }
 
 .reviews-wrapper {
@@ -340,6 +340,7 @@ textarea {
 
 .notification {
     text-align: center;
+    width: 60%;
 }
 
 /* -------------------------------- Media Queries */
