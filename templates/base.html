@@ -82,6 +82,7 @@
                     </form>
                 </div>
             </div>
+
             <!-- Sign in or Account, depending on whether the user is signed in or not -->
             <div class="col-12 lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
@@ -93,16 +94,19 @@
                                 <p class="my-0">My account</p>
                             </div>
                         </a>
+
                         <div class="dropdown-menu border-0" aria-labelledby="user-option">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
                             <a href="{% url 'add_product' %}" class="dropdown-item">Product Managment</a>
                             {% endif %}
                             <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                            <a href="{% url 'send_contact_message' %}" class="dropdown-item">Contact</a>
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
                             <a href="{% url 'account_signup' %}" class="dropdown-item">Sign Up</a>
                             <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                            <a href="{% url 'send_contact_message' %}" class="dropdown-item">Contact</a>
                             {% endif %}
                         </div>
                     </li>

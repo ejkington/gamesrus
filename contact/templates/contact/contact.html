@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block extratitle %} &nbsp||&nbsp Contact{% endblock %}
+
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'css/form-inputs.css' %}">
+{% endblock %}
+
+<!-- Page header for spacing -->
+{% block page_header %}
+<div class="container container-header">
+    <div class="row">
+        <div class="col-12"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<section id="content" class="container">
+    <h1 class="display-3 text-center text-md-start ps-md-5 mt-5 mb-3 text-white">Contact</h1>
+    <h2 class="text-center text-md-start ps-md-5 mb-5 text-white">Fill out the form below to send a message to Games R
+        Us </h2>
+    <div class="row">
+        <div class="col-12 col-md-6 offset-md-3">
+            <!-- Contact Form -->
+            <form action="{% url 'send_contact_message' %}" method="POST">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div class="text-center my-5">
+                    <a href="{% url 'home' %}" class="btn btn-black">Cancel</a>
+                    <button type="submit" class="btn btn-black">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
