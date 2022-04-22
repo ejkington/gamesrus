@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 card2 mb-4 mt-5 bg-white">
+            <div class="card2-body">
+                <h1 class="card2-title">{% block title %} {{ object.title }} {% endblock title %}</h1>
+                <p class="card2-text text-muted">{{ news.author }} | {{ news.created_on }}</p>
+                <p class="card2-text ">{{ object.content | safe }}</p>
+                <a href="{% url 'news' %}">
+                    <button class="btn btn-black2">Back</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

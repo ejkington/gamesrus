@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header class="masthead">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h3 class=" site-heading my-4 mt-3 text-black text-center"> Welcome Games R Us News </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="row">
+        <!-- News Entries -->
+        <div class="col-md-12 mt-3">
+            {% for news in news_list %}
+            <div class="card2 mb-4 border-black">
+                <div class="card2-body">
+                    <h2 class="card2-title">{{ news.title }}</h2>
+                    <p class="card2-text text-muted h6">{{ news.author }} | {{ news.created_on}} </p>
+                    <p class="card2-text">{{news.content|slice:":200" }}</p>
+                    <a href="{% url 'news_detail' news.slug  %}" class="btn btn-black2">Read More &rarr;</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{%endblock%}

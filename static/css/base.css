@@ -114,6 +114,25 @@ a {
     color: white;
 }
 
+.btn-black2 {
+    background: black;
+    color: white;
+    margin: 1rem;
+}
+
+.btn-black2:hover,
+.btn-black2:active,
+.btn-black2:focus {
+    background: hsl(317 100% 54%);
+    color: white;
+}
+
+.card2-text,
+.card2-title {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
