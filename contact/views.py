@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from .forms import ContactMessageForm, GuestContactMessageForm
+from .forms import GuestContactMessageForm
 from .models import ContactMessage
 
 
@@ -12,21 +12,16 @@ def send_contact_message(request):
     """
 
     if request.user.is_authenticated:
-        form = ContactMessageForm()
+        form = GuestContactMessageForm()
     else:
         form = GuestContactMessageForm()
 
     if request.method == "POST":
         if request.user.is_authenticated:
-            form = ContactMessageForm(request.POST)
+            form = GuestContactMessageForm(request.POST)
             if form.is_valid():
-                new_message = form.save(commit=False)
-                # add user data to message fields
-                new_message.message_from = (
-                    request.user.first_name + " " + request.user.last_name
-                )
-                new_message.reply_email = request.user.email
-                new_message.save()
+               
+                form.save()
                 messages.success(request, "Your message has been sent to \
                     us. Thank you for your message and \
                         we will get back to you ASAP")

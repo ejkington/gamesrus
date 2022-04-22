@@ -3,10 +3,14 @@ from .models import ContactMessage
 
 
 class ContactMessageForm(forms.ModelForm):
-    """Class for Form for User to send a Message"""
+    """
+    Class for Form for User to send a Message
+    """
 
     class Meta:
-        """Update Class Meta Data"""
+        """
+        Update Class Meta Data
+        """
 
         model = ContactMessage
         exclude = [
@@ -15,7 +19,9 @@ class ContactMessageForm(forms.ModelForm):
         ]
 
     def __init__(self, *args, **kwargs):
-        """Add  classes and set autofocus on first field"""
+        """
+        Add  classes and set autofocus on first field
+        """
         super().__init__(*args, **kwargs)
         labels = {
             "message_subject": "Message Subject",
@@ -36,7 +42,9 @@ class ContactMessageForm(forms.ModelForm):
 
 
 class GuestContactMessageForm(forms.ModelForm):
-    """Class for Form for Guest to send a Message"""
+    """
+    Class for Form for Guest to send a Message
+    """
 
     class Meta:
         """Update Class Meta Data"""
@@ -45,7 +53,9 @@ class GuestContactMessageForm(forms.ModelForm):
         fields = "__all__"
 
     def __init__(self, *args, **kwargs):
-        """Add  classes and set autofocus on first field"""
+        """
+        Add  classes and set autofocus on first field
+        """
         super().__init__(*args, **kwargs)
         labels = {
             "message_from": "Full Name",
