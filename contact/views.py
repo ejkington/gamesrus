@@ -20,7 +20,7 @@ def send_contact_message(request):
         if request.user.is_authenticated:
             form = GuestContactMessageForm(request.POST)
             if form.is_valid():
-               
+
                 form.save()
                 messages.success(request, "Your message has been sent to \
                     us. Thank you for your message and \
