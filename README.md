@@ -200,27 +200,23 @@ The following models have been used to populate the database and for the site to
 ### Landing Page
 ![Landingpage](https://share.balsamiq.com/c/siyTzfeHmukWFWvwAuHGC9.png)
 ### Landing Page mobile
-![Landingpage](#)
+![Landingpage](https://share.balsamiq.com/c/8B17rUCNjCf6C75qxZMrYS.png)
 ### Products page
 ![Products](https://share.balsamiq.com/c/sXhEHVKxpVRyowRDpmfhRX.png)
 ### Products page mobile
-![Products](#)
+![Products](https://share.balsamiq.com/c/q1ATY6YHmqHcrwreKKCT9X.png)
 ### Product detail page
 ![Productdetail](https://share.balsamiq.com/c/tCwcjBXfVN5J2qG9LAvWJ4.png)
-### Product detail page mobile
-![Productdetail](#)
 ### login/logout page
 ![login](https://share.balsamiq.com/c/2KK2Qr91BdUwRYsZaX7dsm.png)
-### login/logout page mobile
-![login](#)
 ### bag page
 ![bag](https://share.balsamiq.com/c/gBRZBLWYubq87o67P7chKb.png)
 ### bag page mobile
-![bag](#)
+![bag](https://share.balsamiq.com/c/u3Z84Li6ZXtLCqNhvNPQ4q.png)
 ### checkout page
 ![checkout](https://share.balsamiq.com/c/fuz4eHEEYmKrKcVqQfaRwP.png)
-### checkout page mobile
-![checkout](#)
+### News 
+![news](https://share.balsamiq.com/c/tahSC5y85AsyUMvUArKpug.png)
 
 
 ## Scope - Epics and User Stories
@@ -298,8 +294,8 @@ The navbar allows users to easily navigate the website, no matter which page the
 * A Sign In/Sign Up icon
 * Bag
 
-![Navbar](readme/navbar1.png)
-![Navbar](readme/navbar2.png)
+![Navbar](readme/pp5readme/navbar1.png)
+![Navbar](readme/pp5readme/navbar2.png)
 
 If the user us logged in, the Sign Up/Sign In menu becomes the Account menu, and if the user has admin privileges the user can access the manage brands an add product or brand pages through here.
 
@@ -339,7 +335,7 @@ The user is presented with a window-sized (half window on tablet/mobile) With a 
 # Feature 3: The Footer
 The footer includes a link to the site's Facebook business page and a button to go to all products,  Wherever the user is on the site, except for some account operations, the footer is visible at the bottom of the page, giving the user access to these important links at virtually all times.
 
-![footer](readme/footer.png)
+![footer](readme/pp5readme/footer.png)
 
 ## User stories covered:
 
@@ -504,6 +500,12 @@ The Django framework provides an excellent admin interface which this site has t
 ### User stories covered:
 
 As a site owner, I can view an admin page, where I can perform batch editing of model instances on the site including products, categories and orders
+
+##News
+
+![news](readme/pp5readme/news.png)
+
+* As a user i can read news related to the pc accessories world
 
 ## Technologies Used
 
