@@ -7,9 +7,7 @@
                 <h1 class="card2-title">{% block title %} {{ object.title }} {% endblock title %}</h1>
                 <p class="card2-text text-muted">{{ news.author }} | {{ news.created_on }}</p>
                 <p class="card2-text ">{{ object.content | safe }}</p>
-                <a href="{% url 'news' %}">
-                    <button class="btn btn-black2">Back</button>
-                </a>
+                <a class="btn btn-black2" href="{% url 'news' %}">Back</a>
             </div>
         </div>
     </div>
