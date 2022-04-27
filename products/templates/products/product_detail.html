@@ -183,14 +183,15 @@
                         {% csrf_token %}
                         <button class="btn btn-sm btn-black">Delete Review</button>
                     </form>
+                    {% endif %}
                 </div>
+                {% endfor %}
+                <hr>
             </div>
-            <hr>
-            {% endif %}
-            {% endfor %}
         </div>
     </div>
 </div>
+
 {% endblock %}
 
 {% block postloadjs %}
