@@ -47,7 +47,8 @@ def all_products(request):
                 messages.error(request, "No search criteria")
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(
+                name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -74,8 +75,9 @@ def product_detail(request, product_id):
     if request.method == 'POST' and request.user.is_authenticated:
         stars = request.POST.get('stars', 3)
         content = request.POST.get('content', '')
-        review = ProductReview.objects.create(product=product, user=request.user, stars=stars, content=content)
-        
+        review = ProductReview.objects.create(
+            product=product, user=request.user, stars=stars, content=content)
+
         return redirect('product_detail', product_id=product_id)
     context = {
         'product': product,
@@ -86,7 +88,7 @@ def product_detail(request, product_id):
 
 def delete_review(request, review_id):
     """
-    Delete a product review 
+    Delete a product review
     """
     if request.method == 'POST' and request.user.is_authenticated:
         review = get_object_or_404(ProductReview, id=review_id)

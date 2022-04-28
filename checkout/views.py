@@ -87,7 +87,7 @@ def checkout(request):
                         order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        'One of the products in your bag doesent exist in our database.')
+                        'One of the products in your bag doesent exist.')
                     )
                     order.delete()
                     return redirect(reverse('view.bag'))
@@ -96,7 +96,7 @@ def checkout(request):
                 'checkout_success', args=[order.order_number]))
         else:
             messages.error(
-                request, 'An error was found in your form, please double check your information and try again.')
+                request, 'error in your form, double check and try again.')
     else:
         bag = request.session.get('bag', {})
         if not bag:
@@ -173,7 +173,8 @@ def checkout_success(request, order_number):
             user_profile_form.save()
 
     messages.success(
-        request, f'Order successfully placed! your order number is {order_number} confirmation email has been sent to {order.email}')
+        request,
+        f'Order successfully placed! your order number is {order_number} confirmation email has been sent to {order.email}')
 
     if 'bag' in request.session:
         del request.session['bag']
