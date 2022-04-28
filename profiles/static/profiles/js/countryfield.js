@@ -1,5 +1,5 @@
-/*jshint esversion 6 */
-/*globals $:false*/
+/*jshint esversion: 6 */
+/*globals $:false */
 
 let countrySelected = $('#id_default_country').val();
 if (!countrySelected) {
