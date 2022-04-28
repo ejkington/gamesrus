@@ -44,7 +44,6 @@
                     </i> {% if product.get_rating == 0 %}No User Ratings
                     Yet{% else %}{{ product.get_rating|floatformat:1}}{% endif %}
                 </p>
-                {% endif %}
                 {% if product.rating %}
                 <small class="text-muted"><i class="fas fa-star mr-1">
                     </i>
